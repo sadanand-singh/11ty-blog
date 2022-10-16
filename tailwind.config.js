@@ -1,3 +1,5 @@
+const { theme } = require('tailwindcss/defaultConfig')
+
 module.exports = {
   content: ["./**/*.html"],
   darkMode:'class',
@@ -7,6 +9,10 @@ module.exports = {
     },
     extend: {
       colors: {},
+      fontFamily: {
+        primary: ["'Inter'", ...theme.fontFamily.sans],
+        secondary: ["'Noto Sans'", ...theme.fontFamily.sans],
+      },
     },
   },
   variants: {},

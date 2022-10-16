@@ -5,21 +5,33 @@ path: home
 ---
 
 
-<main class="container m-auto px-5 mt-20 sm:px-12 md:px-20 max-w-screen-xl">
+<main class="container m-auto px-5 mt-10 md:mt-15 sm:px-12 md:px-20 max-w-screen-xl">
+  <div class="mt-12 flex flex-col-reverse lg:flex-row items-center lg:justify-between lg:space-x-6">
+    <div>
 
-<div class="container my-24 mx-auto lg:h-screen flex flex-col justify-center items-center">
-  <h1>
-    <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-      {{title}}
-    </strong>
-  </h1>
+    <h1 class="text-left mt-4">
+      <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+        {{title}}
+      </strong>
+    </h1>
 
-  <p>
-    This is my digital garden for all things related to deep learning, machine learning, algorithms, maths, food and everything else!
-    </p>
     <p>
-    I am a Principal Research Scientist <a href="https://micron.com" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-200">@Micron</a>, Photography Enthusiast, and a Foodie!
-  </p>
+      This is my digital garden for all things related to deep learning, machine learning, algorithms, maths, food and everything else!
+      </p>
+      <br/>
+      <p>
+      I am a Principal Research Scientist <a href="https://micron.com" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-200">@Micron</a>, Photography Enthusiast, and a Foodie!
+    </p>
+
+    </div>
+    <div class="blob h-48 md:h-56 lg:h-64">
+      <svg class="blob-rotate-faster h-full" viewBox="0 0 128 129" xmlns="http://www.w3.org/2000/svg">
+        <path d="M51,8c29,15,38-4,40-9c-5,22-20,39-40,47l-43-21z" fill="#86BA0C"/>
+        <path d="M46,100l-40-21v-45l40,20z" fill="#EF7C00"/>
+        <path d="M55,100l39-21v-45l-39,20z" fill='#BD1789'/>
+      </svg>
+    </div>
+  </div>
 
   <section class="">
     <h3 class="mt-12 font-xl text-indigo-500 dark:text-indigo-300 mb-8">INTERESTING WRITINGS</h3>
@@ -81,7 +93,9 @@ path: home
   </div>
 </div>
 
+
+<h3 class="mt-12 font-xl text-indigo-500 dark:text-indigo-300 mb-8">RECENT PUBLICATIONS</h3>
+
 </section>
 
-</div>
 </main>

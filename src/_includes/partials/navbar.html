@@ -18,22 +18,22 @@
         <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto text-center " :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" x-show.transition="true">
                 <ul class="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center">
                         <li class="nav__item mr-3">
-                        <a @click="isOpen = false" class="text-ml inline-block text-gray-500 dark:text-gray-100 no-underline hover:text-indigo-500 dark:hover:text-indigo-400 py-2 px-4" title="Home" href="/">
+                        <a @click="isOpen = false" class="text-ml inline-block text-gray-500 dark:text-gray-100 no-underline hover:text-indigo-500 hover:underline dark:hover:text-indigo-400 py-2 px-4" title="Home" href="/">
                             Home
                         </a>
                     </li>
                     <li class="nav__item mr-3">
-                        <a @click="isOpen = false" class="text-ml inline-block text-gray-500 dark:text-gray-100 dark:hover:text-indigo-400 no-underline hover:text-indigo-500 py-2 px-4" title="Blog" href="/blog">
+                        <a @click="isOpen = false" class="text-ml inline-block text-gray-500 dark:text-gray-100 dark:hover:text-indigo-400 no-underline hover:underline hover:text-indigo-500 py-2 px-4" title="Blog" href="/blog">
                             Blog
                         </a>
                         </li>
                         <li class="nav__item mr-3">
-                        <a @click="isOpen = false" class="text-ml inline-block text-gray-500 dark:text-gray-100 dark:hover:text-indigo-400 no-underline hover:text-indigo-500 py-2 px-4" aria-current="page" title="About" class="" href="/about">
+                        <a @click="isOpen = false" class="text-ml inline-block text-gray-500 dark:text-gray-100 dark:hover:text-indigo-400 no-underline hover:underline hover:text-indigo-500 py-2 px-4" aria-current="page" title="About" class="" href="/about">
                             About
                         </a>
                         <li class="nav__item mr-3">
-                        <a @click="isOpen = false" class="text-ml inline-block text-gray-500 dark:text-gray-100 dark:hover:text-indigo-400 no-underline hover:text-indigo-500 py-2 px-4" href="https://github.com/sadanand-singh" title="Github" target="_blank" rel="noopener noreferrer">
-                            <i class="mt-2" data-feather="github"></i>
+                        <a @click="isOpen = false" class="text-ml inline-block text-gray-500 dark:text-gray-400 dark:hover:text-gray-200 no-underline hover:text-gray-800 py-2 px-4" href="https://github.com/sadanand-singh" title="Github" target="_blank" rel="noopener noreferrer">
+                            <i class="mt-2 fill-gray-500 hover:fill-gray-800 dark:fill-gray-400 dark:hover:fill-gray-200 focus:fill-gray-800 dark:focus:fill-gray-200" data-feather="github"></i>
                         </a>
                         </li>
 

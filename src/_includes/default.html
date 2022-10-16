@@ -8,6 +8,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+    <link rel="manifest" href="/static/img/site.webmanifest">
+    <link rel="mask-icon" href="/static/img/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/static/img/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-config" content="/static/img/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
     <title>
       {{title}}
     </title>
@@ -27,7 +36,7 @@
 
     {{ content | safe }}
 
-  </div>
+    </div>
 
   <div class="mt-32 bg-gray-100 dark:bg-gray-700">
     <div class="container max-w-screen-2xl mx-auto pt-16 text-gray-900 dark:text-gray-200">
@@ -53,5 +62,11 @@
     <script>
       feather.replace()
     </script>
+    <button x-cloak x-data="{scroll : false}" @scroll.window="document.documentElement.scrollTop > 20 ? scroll = true : scroll = false" x-show="scroll" @click="window.scrollTo({top: 0, behavior: 'smooth'})" type="button" data-mdb-ripple="true" data-mdb-ripple-color="light" class="fixed inline-block p-3 text-xs font-medium leading-tight text-white dark:text-gray-600
+      dark:hover:text-white dark:focus:text-white uppercase transition duration-150 ease-in-out bg-slate-600 dark:bg-slate-200 rounded-full shadow-md hover:bg-indigo-700 dark:hover:bg-indigo-400 hover:shadow-lg focus:bg-indigo-700 dark:focus:bg-indigo-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-indigo-800 dark:active:bg-indigo-300 active:shadow-lg bottom-5 right-5" id="btn-back-to-top" x-transition.opacity>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L4.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+        </svg>
+    </button>
   </body>
 </html>
