@@ -1,3 +1,4 @@
+@import url("https://rsms.me/inter/inter.css");
 @tailwind base;
 
 /*Your Custom CSS Goes here*/
@@ -55,107 +56,6 @@ h3 {
   animation: rotate 25s linear infinite;
 }
 
-
-/* Base styles and font-face. */
-body {
-  @apply font-secondary;
-}
-h1 {
-  @apply text-5xl font-bold font-primary leading-none;
-}
-h2 {
-  @apply text-2xl font-semibold font-primary;
-}
-h3 {
-  @apply text-xl font-secondary font-semibold text-gray-800;
-}
-
-p {
-  @apply text-gray-800 leading-relaxed;
-}
-p a {
-  @apply text-indigo-500 underline;
-}
-label {
-  @apply text-gray-600 font-primary text-sm inline-block;
-}
-.link {
-  @apply text-gray-600 font-primary cursor-pointer;
-}
-ul,
-ol {
-  @apply pl-4 text-gray-800;
-}
-ul {
-  @apply list-disc;
-}
-ol {
-  @apply list-decimal;
-}
-.link:hover {
-  @apply underline text-black;
-}
-.line-clamp {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
-.full-width {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-}
-blockquote {
-  @apply border-l-4 border-indigo-500;
-}
-blockquote p {
-  @apply ml-4 italic;
-}
-h2 .header-anchor,
-h3 .header-anchor {
-  visibility: hidden;
-}
-h2:hover .header-anchor,
-h3:hover .header-anchor {
-  visibility: visible;
-}
-img:not(.rounded-full) {
-  @apply cursor-pointer shadow-md;
-}
-.dark {
-  body {
-    @apply text-white;
-  }
-  .link {
-    @apply text-gray-500;
-  }
-  .link:hover {
-    @apply text-white;
-  }
-  p {
-    @apply text-gray-400;
-  }
-  ul,
-  ol {
-    @apply text-gray-400;
-  }
-  p a {
-    @apply text-indigo-300;
-  }
-  label {
-    @apply text-gray-500;
-  }
-  h3 {
-    @apply text-gray-100;
-  }
-  blockquote {
-    @apply border-indigo-300;
-  }
-}
 
 @tailwind components;
 
