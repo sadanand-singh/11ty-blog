@@ -131,72 +131,7 @@ path: about
         <h2 id="publications" class="relative mt-12 mb-6 text-2xl font-bold text-indigo-500 dark:text-indigo-300">
           Publications
         </h2>
-          {% for entry in publication.entries %}
-          <div class="divide-y divide-slate-200 dark:divide-gray-700">
-            <h2 class="text-xl mt-2 font-bold text-gray-800 dark:text-gray-200">{{ entry.year }}</h2>
-            <ul class="mt-2 grid md:grid-cols-2 gap-4 md:gap-4">
-              {% for ref in entry.references %}
-              <li class="py-3">
-                <div class="group flex h-full flex-col justify-between sm:items-end space-x-3 sm:space-x-0">
-                  <div class="w-full h-full flex flex-col">
-                    <h4 class="inline w-full">
-                      <span class="capitalize font-semibold text-gray-800 dark:text-gray-200 ">
-                        {{ ref.title }}
-                      </span>
-                    </h4>
-                    <div class="text-sm text-gray-800 dark:text-gray-200 w-full">
-                      {% for auth in ref.authors %}
-                        {% if auth.primary %}
-                          <span class="font-semibold mr-1">{{ auth.name }}</span>
-                        {% else %}
-                        <span class="mr-1">{{ auth.name }}</span>
-                        {% endif %}
-                      {% endfor %}
-                    </div>
-
-                    <div class="w-full flex-grow">
-                      <a title="{{ ref.label }}" href="{{ ref.link }}" class="text-indigo-500 dark:text-indigo-300 hover:text-indigo-500 dark:hover:text-indigo-200 hover:underline" target="_blank" rel="noopener noreferrer">
-                        {{ ref.label }}
-                      </a>
-                    </div>
-                    <div class="flex mt-1 text-sm text-gray-800 dark:text-gray-200">
-                      {% if ref.pdf %}
-                      <a href="{{ ref.pdf }}" target="_blank" rel="noopener noreferrer" class="mr-2 text-emerald-500 dark:text-emerald-300 hover:text-emerald-700 dark:hover:text-emerald-200">
-                        <span>
-                          <svg aria-hidden="true" class="mr-1 inline h-4 w-4 transition duration-100 " fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.819 14.427c.064.267.077.679-.021.948-.128.351-.381.528-.754.528h-.637v-2.12h.496c.474 0 .803.173.916.644zm3.091-8.65c2.047-.479 4.805.279 6.09 1.179-1.494-1.997-5.23-5.708-7.432-6.882 1.157 1.168 1.563 4.235 1.342 5.703zm-7.457 7.955h-.546v.943h.546c.235 0 .467-.027.576-.227.067-.123.067-.366 0-.489-.109-.198-.341-.227-.576-.227zm13.547-2.732v13h-20v-24h8.409c4.858 0 3.334 8 3.334 8 3.011-.745 8.257-.42 8.257 3zm-12.108 2.761c-.16-.484-.606-.761-1.224-.761h-1.668v3.686h.907v-1.277h.761c.619 0 1.064-.277 1.224-.763.094-.292.094-.597 0-.885zm3.407-.303c-.297-.299-.711-.458-1.199-.458h-1.599v3.686h1.599c.537 0 .961-.181 1.262-.535.554-.659.586-2.035-.063-2.693zm3.701-.458h-2.628v3.686h.907v-1.472h1.49v-.732h-1.49v-.698h1.721v-.784z"></path>
-                          </svg>
-                        </span>
-                          PDF
-                        </a>
-                        {% endif %}
-                        {% if ref.arxiv %}
-                        <a href="{{ ref.arxiv }}" target="_blank" rel="noopener noreferrer" class="mr-2 text-pink-500 dark:text-pink-300 hover:text-pink-700 dark:hover:text-pink-200">
-                          <span class="flex">
-                              <i class="h-4 w-4 mr-2 mt-1" data-feather="external-link"></i>
-                              <span class="inline-block">
-                                Arxiv
-                              </span>
-                          </span>
-                        </a>
-                        {% endif %}
-                        {% if ref.patent %}
-                        <a href="{{ ref.patent }}" target="_blank" rel="noopener noreferrer" class="mr-2 text-sky-500 dark:text-sky-300 hover:text-sky-700 dark:hover:text-sky-200">
-                          <span class="flex">
-                              <i class="h-4 w-4 mr-2 mt-1" data-feather="download"></i>
-                              <span class="inline-block">
-                                Patent
-                              </span>
-                          </span>
-                        </a>
-                        {% endif %}
-                      </div>
-                  </div>
-                </div>
-              </li>
-              {% endfor %}
-            </ul>
-          </div>
-          {% endfor %}
+        {% include "./_includes/partials/publications.html" %}
         <!-- </div> -->
       </section>
 

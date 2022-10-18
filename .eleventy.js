@@ -89,53 +89,14 @@ module.exports = function (eleventyConfig) {
   // Copy Image Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/static/img");
 
-  // Copy favicon to route of /_site
-  eleventyConfig.addPassthroughCopy("./src/favicon.ico");
-
-  /**
- * Add shortcodes
- *
- * @link https://www.11ty.io/docs/shortcodes/
- */
-    eleventyConfig.addShortcode('excerpt', (article) => {
-    if (!article.hasOwnProperty('templateContent')) {
-      console.warn(
-        'Failed to extract excerpt: Document has no property "templateContent".'
-      )
-      return null
-    }
-
-    let excerpt = null
-    const content = article.templateContent
-
-    // The start and end separators to try and match to extract the excerpt
-    const separatorsList = [
-      { start: '<!-- Excerpt Start -->', end: '<!-- Excerpt End -->' },
-      { start: '<p>', end: '</p>' },
-    ]
-
-    separatorsList.some((separators) => {
-      const startPosition = content.indexOf(separators.start)
-      const endPosition = content.indexOf(separators.end)
-
-      if (startPosition !== -1 && endPosition !== -1) {
-        excerpt = content
-          .substring(startPosition + separators.start.length, endPosition)
-          .trim()
-        return true // Exit out of array loop on first match
-      }
-    })
-
-    return excerpt.replace(/(\r\n|\n|\r)/gm, "").substring(0, 100)
-  })
-
   eleventyConfig.addFilter('relatedPosts', require('./lib/filters/related'));
   eleventyConfig.addFilter('featuredPosts', require('./lib/filters/featured'));
+  eleventyConfig.addFilter('getTags', require('./lib/filters/getTags'));
+  eleventyConfig.addFilter('interestingPosts', require('./lib/filters/interesting-posts'));
   eleventyConfig.addNunjucksFilter('limit', (arr, limit) => arr.slice(0, limit));
 
   eleventyConfig.addCollection('posts', require('./lib/collections/posts'));
-  eleventyConfig.addCollection('interestingPosts', require('./lib/collections/interesting-posts'));
-  eleventyConfig.addCollection('tagList', require('./lib/collections/tag-list'));
+
 
   // Minify HTML
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {

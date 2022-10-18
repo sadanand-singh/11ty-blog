@@ -1,0 +1,27 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - post
+    - posts
+    - tagList
+  addAllPagesToCollections: true
+layout: default
+eleventyComputed:
+  title: Tagged “{{ tag }}”
+permalink: /tags/{{ tag | slugify }}/
+---
+{% set postslist = collections[ tag ] %}
+<h2 class="relative mt-12 mb-3 text-2xl font-bold text-indigo-500 dark:text-indigo-300">
+    Blog Post Tag - <span class="capitalize">{{ tag }}</span>
+</h2>
+<h4 class="mb-3"> {{ postslist.length }} posts tagged with "{{ tag }}"</h4>
+
+{% include "./_includes/partials/taglist.html" %}
+
+{% include "./_includes/partials/postslists.html" %}
+
+{% include "./_includes/partials/taglist.html" %}
