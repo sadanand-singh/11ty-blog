@@ -129,7 +129,13 @@ module.exports = function (eleventyConfig) {
     return excerpt.replace(/(\r\n|\n|\r)/gm, "").substring(0, 100)
   })
 
+  eleventyConfig.addFilter('relatedPosts', require('./lib/filters/related'));
+  eleventyConfig.addFilter('featuredPosts', require('./lib/filters/featured'));
   eleventyConfig.addNunjucksFilter('limit', (arr, limit) => arr.slice(0, limit));
+
+  eleventyConfig.addCollection('posts', require('./lib/collections/posts'));
+  eleventyConfig.addCollection('interestingPosts', require('./lib/collections/interesting-posts'));
+  eleventyConfig.addCollection('tagList', require('./lib/collections/tag-list'));
 
   // Minify HTML
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
