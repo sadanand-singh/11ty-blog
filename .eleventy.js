@@ -3,6 +3,38 @@ const moment = require('moment');
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const Image = require('@11ty/eleventy-img');
+const site = require('./src/_data/site');
+
+/**
+ * Prefixes the given URL with the site's base URL.
+ * @param {string} url
+ */
+const toAbsoluteUrl = (url) => {
+  return new URL(url, site.baseUrl).href;
+}
+
+/** Given a local or remote image source, returns the absolute URL
+ * to the image that will eventually get generated once the site is built.
+ * @param {string} src The full path to the source image.
+ * @param {null|number} width The width of the image whose URL we want to return.
+*/
+const toAbsoluteImageUrl = async (src, width = null) => {
+  const imageOptions = {
+    // We only need the original width and format
+    widths: [width],
+    formats: [null],
+    // Where the generated image files get saved
+    outputDir: '_site/assets/images',
+    // Public URL path that's referenced in the img tag's src attribute
+    urlPath: '/assets/images',
+  };
+  const stats = await Image(src, imageOptions);
+  const re = toAbsoluteUrl(Object.values(stats)[0][0].url);
+  console.log(re);
+  return re;
+};
+
 
 /* Markdown Plugins */
 let markdownIt = require("markdown-it");
@@ -94,6 +126,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('getTags', require('./lib/filters/getTags'));
   eleventyConfig.addFilter('interestingPosts', require('./lib/filters/interesting-posts'));
   eleventyConfig.addNunjucksFilter('limit', (arr, limit) => arr.slice(0, limit));
+  eleventyConfig.addFilter('toAbsoluteUrl', toAbsoluteUrl);
+  eleventyConfig.addFilter('toAbsoluteImageUrl', toAbsoluteImageUrl);
+
 
   eleventyConfig.addCollection('posts', require('./lib/collections/posts'));
 

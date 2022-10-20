@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html
+  lang="{{ site.lang }}"
   x-data="{ darkMode: localStorage.getItem('dark') === 'true'} "
   x-init="$watch('darkMode', val => localStorage.setItem('dark', val))"
   x-bind:class="{ 'dark': darkMode }"
@@ -17,12 +18,15 @@
     <meta name="msapplication-TileColor" content="#2d89ef">
     <meta name="msapplication-config" content="/static/img/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description or site.description }}">
+    <meta property="og:url" content="{{ page.url | toAbsoluteUrl }}">
+    <meta property="og:type" content="{{ openGraph.type or 'website' }}">
+    <meta property="og:image" content="{{'src/static/img/android-chrome-512x512.png' | toAbsoluteImageUrl}}">
     <title>
       {{title}}
     </title>
-    {% if description %}
-      <meta name="description" content="{{description}}"/>
-    {% endif %}
+    <meta name="description" content="{{ description or site.description }}"/>
     {% block head %}{% endblock %}
     <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
     {% if prism == true %}
