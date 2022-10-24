@@ -56,7 +56,7 @@ module.exports = function (eleventyConfig) {
   // Merge data instead of overriding
   eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.addPlugin(pluginTOC, {
-    tags: ['h2', 'h3', 'h4'],
+    tags: ['h2', 'h3'],
     wrapperClass: 'text-gray-600 border-l-2 border-indigo-500 pl-1',
     headingClass: 'mb-2 font-semibold text-indigo-600 dark:text-indigo-400 tracking-widestest text-sm',
     headingText: 'TABLE OF CONTENTS',
