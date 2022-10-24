@@ -1,22 +1,79 @@
 ---
 layout: default
 prism: true
+comments: true
 ---
 
-<div class="container max-w-4xl mt-6  px-6">
-    <div class="pb-5 mb-5 border-b border-gray-100">
-        <h1 class="font-bold text-5xl">{{title}}</h1>
-        <p class="text-center text-base leading-6 font-medium text-gray-500">
-            <time> {{ date | readableDate }}
-                by
-                <a>{{ author }}</a>
-
-            </time>
-        </p>
-
+<main class="container m-auto px-5 mt-10 sm:px-12 md:px-20 max-w-screen-xl">
+    <div>
+        <div class="flex mt-12 mb-12 relative">
+            <article class="prose sm:prose md:prose-lg min-w-0 max-w-none tracking-normal">
+                <div class="text-gray-600 dark:text-gray-400">
+                    <div class="mb-2 text-sm text-gray-600 dark:text-gray-400 tracking-normal">
+                        <span>
+                            <time>{{ date | readableDate }}</time>
+                        </span>
+                        <span> • </span>
+                        <span>About {{ content | readingTime }} read</span>
+                    </div>
+                    <h1 id="introduction" class="ml-0 text-lg txt-mod text-left font-bold text-indigo-700 dark:text-indigo-300 tracking-tight ml-0">
+                        {{ title }}
+                    </h1>
+                    {{ content | safe }}
+                </div>
+                {% set nextPost = collections.posts | getNextCollectionItem(page) %}
+                {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+                <div class="flex mt-10 no-underline" style="text-decoration: none !important;">
+                    {% if nextPost %}
+                    <div class="flex-1 no-underline" style="text-decoration: none !important;">
+                        <a class="no-underline text-gray-700 dark:text-gray-400 hover:text-indigo-700 dark:hover:text-indigo-400" style="text-decoration: none !important;" rel="next" href="{{ nextPost.url }}">
+                            <span class="border p-2 mr-2 "> ← Previous </span>
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% if previousPost %}
+                    <div class="no-underline flex-1 text-right" style="text-decoration: none !important;">
+                        <a class="no-underline text-gray-700 dark:text-gray-400 hover:text-indigo-700 dark:hover:text-indigo-400" style="text-decoration: none !important;" rel="prev" href="{{ previousPost.url }}">
+                            <span class="border p-2 mr-2 no-underline"> Next → </span>
+                        </a>
+                    </div>
+                    {% endif %}
+                </div>
+                {% if comments == true %}
+                <div id="comments" class="container pt-9">
+                    <h2 class=" text-indigo-700 dark:text-indigo:300 my-0">Comments</h2>
+                    <hr class="my-0 mb-5" />
+                    <script
+                    src="https://utteranc.es/client.js"
+                    repo={{ site.comments_repo }}
+                    issue-term="title"
+                    label="💬"
+                    theme="preferred-color-scheme"
+                    crossorigin="anonymous"
+                    async>
+                    </script>
+                </div>
+                {% endif %}
+            </article>
+            <aside class="sticky hidden lg:block max-w-xs ml-5 mt-0 h-screen">
+                <div class="mb-5">
+                    {% include "partials/tag-symbol.html" %}
+                    {% set comma = joiner() %}
+                    {% for tag in tags %}
+                        {% if tag != 'post' %}
+                        <span class="text-sm inline-block">
+                        {{ comma() }}
+                        <span class="hover:text-indigo-500 dark:hover:text-indigo-300 hover:underline">
+                            <a href="/tags/{{ tag | slugify }}">{{ tag }}</a>
+                        </span>
+                        </span>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                {% if toc == true %}
+                    {{ content | toc | safe }}
+                {% endif %}
+            </aside>
+        </div>
     </div>
-    <article class="prose lg:prose-xl my-4 mx-auto">
-        {{ content | safe }}
-    </article>
-
-</div>
+</main>

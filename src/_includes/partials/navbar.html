@@ -1,51 +1,81 @@
-<div class="w-full">
-    <nav class="flex items-center justify-center lg:justify-between flex-wrap p-6 container mx-auto" x-data="{ isOpen: false }" @keydown.escape="isOpen = false"  @click.away="isOpen = false">
-        <!--Logo etc-->
-        <div class="flex items-center">
-            <a href="/" class="text-indigo-500 dark:text-indigo-200 dark:hover:text-indigo-100 hover:text-indigo-900 font-bold text-lg">
-                <svg aria-hidden="true" role="img" class="h-12 sm:h-10 w-12 sm:w-10 fill-current hover:text-accent transition duration-150" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 530 373"><path d="M307.637 285.072c31.627-38.387 81.471-113.234 86.314-208.168-52.916 10.502-106.705 32.174-156.527 63.866 1.863 9.817 12.854 73.39-3.901 126.722-12.067-46.235-32.049-79.213-42.001-93.702-39.202 31.739-74.552 70.245-103.206 114.852 6.178 26.257 34.812 51.931 71.999 59.845-45.123 3.83-88.857-7.115-127.216-34.21C131.15 116.786 300.265 24.935 486.784-9.521c-36.526 133.853-103.325 234.484-179.147 294.593zM13.373 271.268C-1.682 182.688 58.725 72.512 126.585 30.505c-13.643 22.125-19.636 34.08-28.477 60.978C174.923 21.302 289.322-3.54 386.365-12.123 234.265 29.23 77.778 118.242 13.374 271.269zM487.735 87.666c19.744 82.303 10.79 144.022-19.432 195.124-1.387-26.878-10.634-51.175-10.665-51.257-.007.146-21.579 71.84-82.148 118.436 8.956-20.031 11.304-44.879 11.304-44.879-43.279 21.442-102.288 45.54-166.712 47.429 138.556-52.395 221.66-135.299 267.653-264.853z"></path></svg></a>
-        </div>
+<div class="sm:hidden text-xl" :aria-hidden="!isOpen" :class="{'opac bg-white': isOpen }">
+    <button @click="isOpen = !isOpen" type="button" class="md:hidden fixed right-0 px-5 py-12 z-50 focus:outline-none">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+            <path x-show="isOpen" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            <path x-show="!isOpen" fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clipRule="evenodd"></path>
+        </svg>
+    </button>
+    <div class="relative z-10" x-show="isOpen">
+        <div class="w-full h-screen fixed bg-primary opacity-90"></div>
+        <button type="button" aria-label="Nav" class="w-full h-screen fixed cursor-auto"></button>
+        <nav class="right-0 h-screen mt-auto py-48 px-6 fixed flex flex-col items-end font-medium text-primary tracking-widest">
+            <div class="flex-grow hover:text-indigo-700 dark:hover:text-indigo-300 transition duration-150">
+                <a href="/">HOME</a>
+            </div>
+            <div class="flex-grow hover:text-indigo-700 dark:hover:text-indigo-300 transition duration-150">
+                <a href="/blog">BLOG</a>
+            </div>
+            <div class="flex-grow hover:text-indigo-700 dark:hover:text-indigo-300 transition duration-150">
+                <a href="/about">ABOUT</a>
+            </div>
+            <div class="flex-grow">
+                <a title="Github" href="https://github.com/sadanand-singh" target="_blank" rel="noopener noreferrer">
+                    <i class="text-gray-700 hover:text-indigo-700 dark:text-gray-300 dark:hover:text-indigo-500 fill-gray-700 hover:fill-indigo-700 dark:fill-gray-300 dark:hover:fill-indigo-500" data-feather="github"></i>
+                </a>
+            </div>
 
-        <!--Toggle button (hidden on large screens)-->
-        <button @click="isOpen = !isOpen" type="button" class="ml-auto block lg:hidden px-2 text-primary-500 hover:text-primary-500 focus:outline-none focus:text-primary-500" :class="{ 'transition transform-180': isOpen }" aria-label="Menu">
-            <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
-                <path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
-                <path x-show="!isOpen" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
-            </svg>
-        </button>
-
-        <!--Menu-->
-        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto text-center " :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" x-show.transition="true">
-                <ul class="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center">
-                        <li class="nav__item mr-3">
-                        <a @click="isOpen = false" class="text-ml inline-block text-gray-500 dark:text-gray-100 no-underline hover:text-indigo-500 hover:underline dark:hover:text-indigo-400 py-2 px-4" title="Home" href="/">
-                            Home
-                        </a>
-                    </li>
-                    <li class="nav__item mr-3">
-                        <a @click="isOpen = false" class="text-ml inline-block text-gray-500 dark:text-gray-100 dark:hover:text-indigo-400 no-underline hover:underline hover:text-indigo-500 py-2 px-4" title="Blog" href="/blog">
-                            Blog
-                        </a>
-                        </li>
-                        <li class="nav__item mr-3">
-                        <a @click="isOpen = false" class="text-ml inline-block text-gray-500 dark:text-gray-100 dark:hover:text-indigo-400 no-underline hover:underline hover:text-indigo-500 py-2 px-4" aria-current="page" title="About" class="" href="/about">
-                            About
-                        </a>
-                        <li class="nav__item mr-3">
-                        <a @click="isOpen = false" class="text-ml inline-block text-gray-500 dark:text-gray-400 dark:hover:text-gray-200 no-underline hover:text-gray-800 py-2 px-4" href="https://github.com/sadanand-singh" title="Github" target="_blank" rel="noopener noreferrer">
-                            <i class="mt-2 fill-gray-500 hover:fill-gray-800 dark:fill-gray-400 dark:hover:fill-gray-200 focus:fill-gray-800 dark:focus:fill-gray-200" data-feather="github"></i>
-                        </a>
-                        </li>
-
-                    <li class="nav__item mr-3">
-                        <button @click="darkMode = !darkMode" aria-label="Activate Dark Mode" title="Activate Dark Mode" :class="{ 'mt-2 text-yellow-700 hover:text-yellow-900' : !darkMode , 'hidden' : darkMode}">
-                            <i data-feather="moon"></i>
-                        </button>
-                        <button @click="darkMode = !darkMode" aria-label="Activate Dark Mode" title="Activate Dark Mode" :class="{ 'mt-2 text-yellow-500 hover:text-yellow-300' : darkMode , 'hidden' : !darkMode}">
-                            <i data-feather="sun"></i>
-                        </button>
-                    </li>
-                </ul>
-        </div>
-    </nav>
+            <button @click="darkMode = !darkMode" aria-label="Activate Dark Mode" title="Activate Dark Mode" :class="{ 'mt-2 text-yellow-600 hover:text-yellow-800' : !darkMode , 'hidden' : darkMode}">
+                <i class="fill-yellow-600 hover:fill-yellow-800" data-feather="moon"></i>
+            </button>
+            <button @click="darkMode = !darkMode" aria-label="Activate Dark Mode" title="Activate Dark Mode" :class="{ 'mt-2 text-yellow-400 hover:text-yellow-600' : darkMode , 'hidden' : !darkMode}">
+                <i class="fill-yellow-400 hover:fill-yellow-600" data-feather="sun"></i>
+            </button>
+        </nav>
+    </div>
 </div>
+
+<header class="container m-auto px-5 sm:px-12 md:px-20 max-w-screen-xl h-32 overflow-hidden" :class="{'overflow-hidden overscroll-aut opacity-10': isOpen }">
+    <nav class="mt-auto h-full flex space-x-6 items-center justify-center md:justify-start text-sm" aria-label="Main Navigation">
+        <a aria-label="Website logo, go back to homepage." href="/">
+            <svg :aria-hidden="isOpen" role="img" class="h-12 sm:h-10 w-12 sm:w-10 fill-current hover:text-indigo-700 dark:hover:text-indigo-300 transition duration-150" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 530 373">
+                <path d="M307.637 285.072c31.627-38.387 81.471-113.234 86.314-208.168-52.916 10.502-106.705 32.174-156.527 63.866 1.863 9.817 12.854 73.39-3.901 126.722-12.067-46.235-32.049-79.213-42.001-93.702-39.202 31.739-74.552 70.245-103.206 114.852 6.178 26.257 34.812 51.931 71.999 59.845-45.123 3.83-88.857-7.115-127.216-34.21C131.15 116.786 300.265 24.935 486.784-9.521c-36.526 133.853-103.325 234.484-179.147 294.593zM13.373 271.268C-1.682 182.688 58.725 72.512 126.585 30.505c-13.643 22.125-19.636 34.08-28.477 60.978C174.923 21.302 289.322-3.54 386.365-12.123 234.265 29.23 77.778 118.242 13.374 271.269zM487.735 87.666c19.744 82.303 10.79 144.022-19.432 195.124-1.387-26.878-10.634-51.175-10.665-51.257-.007.146-21.579 71.84-82.148 118.436 8.956-20.031 11.304-44.879 11.304-44.879-43.279 21.442-102.288 45.54-166.712 47.429 138.556-52.395 221.66-135.299 267.653-264.853z"></path>
+            </svg>
+        </a>
+        <span class="hidden sm:flex flex-grow items-center space-x-6">
+            <a title="Home" href="/">
+                <span class="font-normal text-lg text-gray-800 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-indigo-300 transition duration-150 text-secondary">
+                    Home
+                </span>
+            </a>
+            <a title="Blog" href="/blog">
+                <span class="font-normal text-lg text-gray-800 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-indigo-300 transition duration-150 text-accent">
+                    Blog
+                </span>
+            </a>
+            <a title="About" href="/about">
+                <span class="font-normal text-lg text-gray-800 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-indigo-300 transition duration-150 text-secondary">
+                    About
+                </span>
+            </a>
+            <a title="Github" href="https://github.com/sadanand-singh" target="_blank" rel="noopener noreferrer">
+                <i class="text-gray-700 hover:text-indigo-700 dark:text-gray-300 dark:hover:text-indigo-500 fill-gray-700 hover:fill-indigo-700 dark:fill-gray-300 dark:hover:fill-indigo-500" data-feather="github"></i>
+            </a>
+        </span>
+        <button x-show="!isOpen" @click="darkMode = !darkMode" aria-label="Activate Dark Mode" title="Activate Dark Mode" :class="{ 'hidden sm:flex text-yellow-600 hover:text-yellow-800' : !darkMode , 'hidden' : darkMode}">
+            <i class="hidden sm:flex fill-yellow-600 hover:fill-yellow-800" data-feather="moon"></i>
+        </button>
+        <button x-show="!isOpen" @click="darkMode = !darkMode" aria-label="Activate Dark Mode" title="Activate Dark Mode" :class="{ 'hidden sm:flex text-yellow-400 hover:text-yellow-600' : darkMode , 'hidden' : !darkMode}">
+            <i class="hidden sm:flex fill-yellow-400 hover:fill-yellow-600" data-feather="sun"></i>
+        </button>
+    </nav>
+    <div class="hidden sm:block">
+        <div class="-mt-120 sm:-mt-120 ml-4">
+            <div aria-hidden="true">
+                <div class="blob-bg absolute">
+                    <svg class="block m-auto blob-rotate h-64 fill-gray-200 dark:fill-gray-900" viewBox="0 0 715 693" xmlns="http://www.w3.org/2000/svg"><path d="M359.408 0.499261C434.083 0.69572 509.059 15.4608 570.136 58.4268C631.828 101.825 675.247 166.543 697.772 238.528C720.119 309.946 720.46 387.141 695.015 457.515C670.121 526.365 618.875 581.064 558.794 622.901C499.694 664.055 431.329 687.499 359.408 691.212C284.339 695.087 205.553 688.115 144.481 644.291C83.2293 600.338 54.1113 526.936 30.6392 455.293C7.11277 383.484 -10.9409 307.559 10.4113 235.074C32.1072 161.421 84.1477 100.148 147.872 57.3159C209.988 15.5657 284.566 0.302364 359.408 0.499261Z"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

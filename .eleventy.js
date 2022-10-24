@@ -2,8 +2,9 @@ const yaml = require("js-yaml");
 const moment = require('moment');
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-const Image = require('@11ty/eleventy-img');
+// const pluginRss = require("@11ty/eleventy-plugin-rss");
+const readingTime = require('eleventy-plugin-reading-time');
+const pluginTOC = require('@thedigitalman/eleventy-plugin-toc-a11y');
 const site = require('./src/_data/site');
 
 /**
@@ -13,28 +14,6 @@ const site = require('./src/_data/site');
 const toAbsoluteUrl = (url) => {
   return new URL(url, site.baseUrl).href;
 }
-
-/** Given a local or remote image source, returns the absolute URL
- * to the image that will eventually get generated once the site is built.
- * @param {string} src The full path to the source image.
- * @param {null|number} width The width of the image whose URL we want to return.
-*/
-const toAbsoluteImageUrl = async (src, width = null) => {
-  const imageOptions = {
-    // We only need the original width and format
-    widths: [width],
-    formats: [null],
-    // Where the generated image files get saved
-    outputDir: '_site/assets/images',
-    // Public URL path that's referenced in the img tag's src attribute
-    urlPath: '/assets/images',
-  };
-  const stats = await Image(src, imageOptions);
-  const re = toAbsoluteUrl(Object.values(stats)[0][0].url);
-  console.log(re);
-  return re;
-};
-
 
 /* Markdown Plugins */
 let markdownIt = require("markdown-it");
@@ -76,6 +55,16 @@ module.exports = function (eleventyConfig) {
 
   // Merge data instead of overriding
   eleventyConfig.setDataDeepMerge(true);
+  eleventyConfig.addPlugin(pluginTOC, {
+    tags: ['h2', 'h3', 'h4'],
+    wrapperClass: 'text-gray-600 border-l-2 border-indigo-500 pl-1',
+    headingClass: 'mb-2 font-semibold text-indigo-600 dark:text-indigo-400 tracking-widestest text-sm',
+    headingText: 'TABLE OF CONTENTS',
+    listType: 'ul',
+    listClass: 'relative pl-1',
+    listItemClass: 'pl-1 active:text-indigo-500',
+    listItemAnchorClass: 'transition duration-500 transform hover:translate-x-2 block mt-2 text-sm hover:text-indigo-600 ml-0 text-gray-700 dark:text-gray-300 dark:hover:text-indigo-400 font-semibold active:text-indigo-500'
+  });
 
   eleventyConfig.setLibrary("md", markdownIt(options)
     .use(markdownItAnchor, opts)
@@ -127,9 +116,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('interestingPosts', require('./lib/filters/interesting-posts'));
   eleventyConfig.addNunjucksFilter('limit', (arr, limit) => arr.slice(0, limit));
   eleventyConfig.addFilter('toAbsoluteUrl', toAbsoluteUrl);
-  eleventyConfig.addFilter('toAbsoluteImageUrl', toAbsoluteImageUrl);
 
 
+  eleventyConfig.addPlugin(readingTime);
   eleventyConfig.addCollection('posts', require('./lib/collections/posts'));
 
 

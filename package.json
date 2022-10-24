@@ -1,18 +1,19 @@
 {
   "scripts": {
     "clean": "rimraf _site",
-    "start": "npm-run-all clean --parallel css eleventy browsersync",
-    "eleventy": "eleventy --watch",
+    "start": "cross-env ELEVENTY_ENV=production npm-run-all clean --parallel css eleventy browsersync",
+    "eleventy": "eleventy --serve",
     "debug": "set DEBUG=* & eleventy",
     "css": "postcss src/static/css/tailwind.css --o _site/static/css/style.css --watch",
-    "build": "rimraf _site & cross-env NODE_ENV=production eleventy && cross-env NODE_ENV=production tailwindcss -i src/static/css/tailwind.css -o _site/static/css/style.css",
+    "build": "rimraf _site & cross-env NODE_ENV=production ELEVENTY_ENV=production eleventy && cross-env NODE_ENV=production ELEVENTY_ENV=production tailwindcss -i src/static/css/tailwind.css -o _site/static/css/style.css",
     "browsersync": "browser-sync start --server _site --files _site --host 0.0.0.0 --port 8080 --no-notify --no-open"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
     "@11ty/eleventy-img": "^2.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
     "@tailwindcss/typography": "^0.5.7",
+    "@thedigitalman/eleventy-plugin-toc-a11y": "^2.1.0",
     "alpinejs": "^3.10.3",
     "browser-sync": "^2.27.10",
     "cross-env": "^7.0.3",
@@ -30,6 +31,7 @@
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@iktakahiro/markdown-it-katex": "^4.0.1",
     "autoprefixer": "^10.4.2",
+    "eleventy-plugin-reading-time": "^0.0.1",
     "lodash": "^4.17.21",
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.5",
