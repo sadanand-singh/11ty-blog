@@ -9,13 +9,13 @@
         <div class="w-full h-screen fixed bg-primary opacity-90"></div>
         <button type="button" aria-label="Nav" class="w-full h-screen fixed cursor-auto"></button>
         <nav class="right-0 h-screen mt-auto py-48 px-6 fixed flex flex-col items-end font-medium text-primary tracking-widest">
-            <div class="flex-grow hover:text-indigo-700 dark:hover:text-indigo-300 transition duration-150">
+            <div class="flex-grow hover:text-indigo-700 dark:hover:text-indigo-300 transition duration-150 {{ 'font-bold text-indigo-600 dark:text-indigo-400' if '/' == page.url }}">
                 <a href="/">HOME</a>
             </div>
-            <div class="flex-grow hover:text-indigo-700 dark:hover:text-indigo-300 transition duration-150">
+            <div class="flex-grow hover:text-indigo-700 dark:hover:text-indigo-300 transition duration-150 {{ 'font-bold text-indigo-600 dark:text-indigo-400' if '/blog' in page.url }}">
                 <a href="/blog">BLOG</a>
             </div>
-            <div class="flex-grow hover:text-indigo-700 dark:hover:text-indigo-300 transition duration-150">
+            <div class="flex-grow hover:text-indigo-700 dark:hover:text-indigo-300 transition duration-150 {{ 'font-bold text-indigo-600 dark:text-indigo-400' if '/about' in page.url }}">
                 <a href="/about">ABOUT</a>
             </div>
             <div class="flex-grow">
@@ -43,17 +43,17 @@
         </a>
         <span class="hidden sm:flex flex-grow items-center space-x-6">
             <a title="Home" href="/">
-                <span class="font-normal text-lg text-gray-800 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-indigo-300 transition duration-150 text-secondary">
+                <span class="font-normal text-lg text-gray-800 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-indigo-300 transition duration-150 text-secondary {{ 'font-bold text-indigo-600 dark:text-indigo-400' if '/' == page.url }}">
                     Home
                 </span>
             </a>
             <a title="Blog" href="/blog">
-                <span class="font-normal text-lg text-gray-800 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-indigo-300 transition duration-150 text-accent">
+                <span class="font-normal text-lg text-gray-800 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-indigo-300 transition duration-150 text-accent {{ 'font-bold text-indigo-600 dark:text-indigo-400' if '/blog' in page.url }}">
                     Blog
                 </span>
             </a>
             <a title="About" href="/about">
-                <span class="font-normal text-lg text-gray-800 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-indigo-300 transition duration-150 text-secondary">
+                <span class="font-normal text-lg text-gray-800 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-indigo-300 transition duration-150 text-secondary {{ 'font-bold text-indigo-600 dark:text-indigo-400' if '/about' in page.url }}">
                     About
                 </span>
             </a>
