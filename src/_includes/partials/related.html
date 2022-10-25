@@ -1,4 +1,4 @@
-{% set related = collections.posts | relatedPosts(tags, page.date, page.url) %}
+{% set related = collections.posts | relatedPosts(title, tags, page.date, page.url) %}
 
 <ul class="mt-3  grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 ">
     {% for post in related %}
