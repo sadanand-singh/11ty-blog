@@ -58,7 +58,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginTOC, {
     tags: ['h2', 'h3'],
     wrapperClass: 'text-gray-600 border-l-2 border-indigo-500 pl-1',
-    headingClass: 'mb-2 font-semibold text-indigo-600 dark:text-indigo-400 tracking-widestest text-sm',
+    headingClass: 'mt-10 text-lg font-normal text-indigo-700 dark:text-indigo-300 tracking-widestest',
     headingText: 'TABLE OF CONTENTS',
     listType: 'ul',
     listClass: 'relative pl-1',

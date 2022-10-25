@@ -1,7 +1,7 @@
 {
   "scripts": {
     "clean": "rimraf _site",
-    "start": "cross-env ELEVENTY_ENV=production npm-run-all clean --parallel css eleventy browsersync",
+    "start": "cross-env ELEVENTY_ENV=development npm-run-all clean --parallel css eleventy browsersync",
     "eleventy": "eleventy --watch",
     "debug": "set DEBUG=* & eleventy",
     "css": "postcss src/static/css/tailwind.css --o _site/static/css/style.css --watch",
