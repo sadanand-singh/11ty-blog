@@ -10,8 +10,8 @@ comments: true
         <div class="hidden transition duration-500 transform hover:translate-x-2 block mt-2 text-sm hover:text-indigo-600 ml-0 text-gray-700 dark:text-gray-300 dark:hover:text-indigo-400 font-semibold active:text-indigo-500 pl-1 active:text-indigo-500 relative pl-1 mb-2 font-semibold text-indigo-600 dark:text-indigo-400 tracking-widestest text-sm text-gray-600 border-l-2 border-indigo-500 pl-1"></div>
         <!-- end of fake div -->
         <div class="flex mt-12 mb-12 relative">
-            <article class="prose sm:prose md:prose-lg min-w-0 max-w-none tracking-normal">
-                <div class="text-gray-600 dark:text-gray-400">
+            <article class="prose prose-slate dark:prose-invert prose-headings:text-indigo-500 dark:prose-headings:text-indigo-300 prose-a:text-gray-600 dark:prose-a:text-gray-400 hover:prose-a:text-indigo-700 dark:hover:prose-a:text-indigo-300 md:prose-lg min-w-0 max-w-none tracking-normal">
+                <div>
                     <div class="mb-2 text-sm text-gray-600 dark:text-gray-400 tracking-normal">
                         <span>
                             <time>{{ date | readableDate }}</time>
@@ -78,5 +78,41 @@ comments: true
                 {% endif %}
             </aside>
         </div>
+    </div>
+    <div class="">
+    <section class="">
+        <h2 class="mt-10 text-lg font-normal text-indigo-500 dark:text-indigo-300 tracking-widestest">
+            RELATED POSTS |
+            {% include "partials/tag-symbol.html" %}
+            {% set comma = joiner() %}
+            {% for tag in tags %}
+                {% if tag != 'post' %}
+                <span class="text-sm inline-block">
+                {{ comma() }}
+                <span class="hover:text-indigo-500 dark:hover:text-indigo-300 hover:underline">
+                    <a href="/tags/{{ tag | slugify }}">{{ tag }}</a>
+                </span>
+                </span>
+                {% endif %}
+            {% endfor %}
+        </h2>
+        <ul class="mt-3  grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 ">
+            <li class="py-2 pb-3  border border-l-0 border-r-0 border-t-0 border-b-1 cursor-pointer ">
+                <a href="/blog/ubuntu-btrfs-guide/">
+                    <div class="flex flex-col h-full ">
+                        <div class="w-full text-sm font-light text-gray-600 dark:text-gray-400 mr-1">
+                            February 24th 2021
+                        </div>
+                        <div class="w-full font-semibold hover:text-indigo-600 dark:hover:text-indigo-400 mb-1">
+                            Ubuntu Desktop 20.04 with btrfs-luks full disk encryption
+                        </div>
+                        <div class="w-full flex-grow text-sm text-gray-600 dark:text-gray-400">
+                            If you have followed me here, you know I am a big fan of BTRFS and luks…
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </section>
     </div>
 </main>

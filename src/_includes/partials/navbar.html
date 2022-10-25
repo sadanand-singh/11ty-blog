@@ -24,11 +24,11 @@
                 </a>
             </div>
 
-            <button @click="darkMode = !darkMode" aria-label="Activate Dark Mode" title="Activate Dark Mode" :class="{ 'mt-2 text-yellow-600 hover:text-yellow-800' : !darkMode , 'hidden' : darkMode}">
-                <i class="fill-yellow-600 hover:fill-yellow-800" data-feather="moon"></i>
+            <button @click="darkMode = !darkMode" aria-label="Activate Dark Mode" title="Activate Dark Mode" :class="{ 'mt-2 text-orange-600 hover:text-orange-700' : !darkMode , 'hidden' : darkMode}">
+                <i class="fill-orange-600 hover:fill-orange-700" data-feather="moon"></i>
             </button>
-            <button @click="darkMode = !darkMode" aria-label="Activate Dark Mode" title="Activate Dark Mode" :class="{ 'mt-2 text-yellow-400 hover:text-yellow-600' : darkMode , 'hidden' : !darkMode}">
-                <i class="fill-yellow-400 hover:fill-yellow-600" data-feather="sun"></i>
+            <button @click="darkMode = !darkMode" aria-label="Activate Dark Mode" title="Activate Dark Mode" :class="{ 'mt-2 text-yellow-400 hover:text-yellow-200' : darkMode , 'hidden' : !darkMode}">
+                <i class="fill-yellow-400 hover:fill-yellow-200" data-feather="sun"></i>
             </button>
         </nav>
     </div>
@@ -43,17 +43,17 @@
         </a>
         <span class="hidden sm:flex flex-grow items-center space-x-6">
             <a title="Home" href="/">
-                <span class="font-normal text-lg text-gray-800 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-indigo-300 transition duration-150 text-secondary {{ 'font-bold text-indigo-600 dark:text-indigo-400' if '/' == page.url }}">
+                <span class="font-normal text-lg text-gray-800 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-indigo-300 transition duration-150 {{ 'font-bold text-indigo-600 dark:text-indigo-400' if '/' == page.url }}">
                     Home
                 </span>
             </a>
             <a title="Blog" href="/blog">
-                <span class="font-normal text-lg text-gray-800 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-indigo-300 transition duration-150 text-accent {{ 'font-bold text-indigo-600 dark:text-indigo-400' if '/blog' in page.url }}">
+                <span class="font-normal text-lg text-gray-800 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-indigo-300 transition duration-150 {{ 'font-bold text-indigo-600 dark:text-indigo-400' if '/blog' in page.url }}">
                     Blog
                 </span>
             </a>
             <a title="About" href="/about">
-                <span class="font-normal text-lg text-gray-800 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-indigo-300 transition duration-150 text-secondary {{ 'font-bold text-indigo-600 dark:text-indigo-400' if '/about' in page.url }}">
+                <span class="font-normal text-lg text-gray-800 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-indigo-300 transition duration-150 {{ 'font-bold text-indigo-600 dark:text-indigo-400' if '/about' in page.url }}">
                     About
                 </span>
             </a>
@@ -61,11 +61,11 @@
                 <i class="text-gray-700 hover:text-indigo-700 dark:text-gray-300 dark:hover:text-indigo-500 fill-gray-700 hover:fill-indigo-700 dark:fill-gray-300 dark:hover:fill-indigo-500" data-feather="github"></i>
             </a>
         </span>
-        <button x-show="!isOpen" @click="darkMode = !darkMode" aria-label="Activate Dark Mode" title="Activate Dark Mode" :class="{ 'hidden sm:flex text-yellow-600 hover:text-yellow-800' : !darkMode , 'hidden' : darkMode}">
-            <i class="hidden sm:flex fill-yellow-600 hover:fill-yellow-800" data-feather="moon"></i>
+        <button x-show="!isOpen" @click="darkMode = !darkMode" aria-label="Activate Dark Mode" title="Activate Dark Mode" :class="{ 'hidden sm:flex text-orange-600 hover:text-orange-700' : !darkMode , 'hidden' : darkMode}">
+            <i class="hidden sm:flex fill-orange-600 hover:fill-orange-700" data-feather="moon"></i>
         </button>
-        <button x-show="!isOpen" @click="darkMode = !darkMode" aria-label="Activate Dark Mode" title="Activate Dark Mode" :class="{ 'hidden sm:flex text-yellow-400 hover:text-yellow-600' : darkMode , 'hidden' : !darkMode}">
-            <i class="hidden sm:flex fill-yellow-400 hover:fill-yellow-600" data-feather="sun"></i>
+        <button x-show="!isOpen" @click="darkMode = !darkMode" aria-label="Activate Dark Mode" title="Activate Dark Mode" :class="{ 'hidden sm:flex text-yellow-400 hover:text-yellow-200' : darkMode , 'hidden' : !darkMode}">
+            <i class="hidden sm:flex fill-yellow-400 hover:fill-yellow-200" data-feather="sun"></i>
         </button>
     </nav>
     <div class="hidden sm:block">

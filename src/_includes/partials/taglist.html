@@ -6,7 +6,7 @@
     {%- for name, length in postslist | getTags -%}
         <span class="text-sm inline-block">
             {{ comma() }}
-            <span class="hover:text-accent hover:underline">
+            <span class="hover:text-indigo-700 dark:hover:text-indigo-300 hover:underline dark:hover:underline">
                 <a href="/tags/{{ name | slugify }}">{{ name }} ({{ length }})</a>
             </span>
         </span>
