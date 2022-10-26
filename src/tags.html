@@ -16,7 +16,7 @@ permalink: /tags/{{ tag | slugify }}/
 ---
 
 <main class="container m-auto px-5 mt-10 sm:px-12 md:px-20 max-w-screen-xl">
-{% set postslist = collections[ tag ] %}
+{% set postslist = collections[ tag ] | reverse %}
 <h2 class="relative mt-12 mb-3 text-2xl font-bold text-indigo-500 dark:text-indigo-300">
     Blog Post Tag - <span class="capitalize">{{ tag }}</span>
 </h2>

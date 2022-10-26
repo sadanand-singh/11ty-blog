@@ -128,7 +128,7 @@ plt.title('SVC with RBF kernel')
 plt.show()
 ```
 
-<img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1567366599/svm/img1.png">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1567366599/svm/img1.png" %}
 
 ### Parameter Tuning for SVM Classification
 
@@ -170,8 +170,12 @@ i.e. generalization error and cause over-fitting problem. $C$ controls the trade
 decision boundary and classifying the training points correctly.
 
 {% columns %}
-  {% cols %} <figure><img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1567366599/svm/img2.png"></figure> {% endcols %}
-  {% cols %} <figure><img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1567366767/svm/img4.png"></figure> {% endcols %}
+  {% cols %}
+    {% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1567366599/svm/img2.png" %}
+  {% endcols %}
+  {% cols %}
+    {% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1567366767/svm/img4.png" %}
+  {% endcols %}
 {% endcolumns %}
 
 We will be using 5-fold cross validation to perform grid search to calculate optimal
@@ -220,42 +224,44 @@ print()
 
 Output:
 
-    # Tuning hyper-parameters
+```text
+# Tuning hyper-parameters
 
-    Best parameters set found on development set:
+Best parameters set found on development set:
 
-    {'C': 1, 'gamma': 0.1, 'kernel': 'rbf'}
+{'C': 1, 'gamma': 0.1, 'kernel': 'rbf'}
 
-    Grid scores on training set:
+Grid scores on training set:
 
-    0.634 (+/-0.066) for {'C': 1, 'gamma': 0.0001, 'kernel': 'rbf'}
-    0.634 (+/-0.066) for {'C': 1, 'gamma': 0.001, 'kernel': 'rbf'}
-    0.634 (+/-0.066) for {'C': 1, 'gamma': 0.01, 'kernel': 'rbf'}
-    0.768 (+/-0.168) for {'C': 1, 'gamma': 0.1, 'kernel': 'rbf'}
-    0.768 (+/-0.161) for {'C': 1, 'gamma': 0.2, 'kernel': 'rbf'}
-    0.768 (+/-0.173) for {'C': 1, 'gamma': 0.5, 'kernel': 'rbf'}
-    0.634 (+/-0.066) for {'C': 10, 'gamma': 0.0001, 'kernel': 'rbf'}
-    0.634 (+/-0.066) for {'C': 10, 'gamma': 0.001, 'kernel': 'rbf'}
-    0.768 (+/-0.168) for {'C': 10, 'gamma': 0.01, 'kernel': 'rbf'}
-    0.750 (+/-0.193) for {'C': 10, 'gamma': 0.1, 'kernel': 'rbf'}
-    0.750 (+/-0.193) for {'C': 10, 'gamma': 0.2, 'kernel': 'rbf'}
-    0.732 (+/-0.183) for {'C': 10, 'gamma': 0.5, 'kernel': 'rbf'}
-    0.634 (+/-0.066) for {'C': 100, 'gamma': 0.0001, 'kernel': 'rbf'}
-    0.768 (+/-0.168) for {'C': 100, 'gamma': 0.001, 'kernel': 'rbf'}
-    0.759 (+/-0.178) for {'C': 100, 'gamma': 0.01, 'kernel': 'rbf'}
-    0.741 (+/-0.164) for {'C': 100, 'gamma': 0.1, 'kernel': 'rbf'}
-    0.723 (+/-0.175) for {'C': 100, 'gamma': 0.2, 'kernel': 'rbf'}
-    0.732 (+/-0.183) for {'C': 100, 'gamma': 0.5, 'kernel': 'rbf'}
-    0.768 (+/-0.168) for {'C': 1000, 'gamma': 0.0001, 'kernel': 'rbf'}
-    0.759 (+/-0.178) for {'C': 1000, 'gamma': 0.001, 'kernel': 'rbf'}
-    0.750 (+/-0.193) for {'C': 1000, 'gamma': 0.01, 'kernel': 'rbf'}
-    0.732 (+/-0.183) for {'C': 1000, 'gamma': 0.1, 'kernel': 'rbf'}
-    0.732 (+/-0.183) for {'C': 1000, 'gamma': 0.2, 'kernel': 'rbf'}
-    0.696 (+/-0.164) for {'C': 1000, 'gamma': 0.5, 'kernel': 'rbf'}
-    0.768 (+/-0.173) for {'C': 1, 'kernel': 'linear'}
-    0.759 (+/-0.178) for {'C': 10, 'kernel': 'linear'}
-    0.759 (+/-0.178) for {'C': 100, 'kernel': 'linear'}
-    0.759 (+/-0.178) for {'C': 1000, 'kernel': 'linear'}
+0.634 (+/-0.066) for {'C': 1, 'gamma': 0.0001, 'kernel': 'rbf'}
+0.634 (+/-0.066) for {'C': 1, 'gamma': 0.001, 'kernel': 'rbf'}
+0.634 (+/-0.066) for {'C': 1, 'gamma': 0.01, 'kernel': 'rbf'}
+0.768 (+/-0.168) for {'C': 1, 'gamma': 0.1, 'kernel': 'rbf'}
+0.768 (+/-0.161) for {'C': 1, 'gamma': 0.2, 'kernel': 'rbf'}
+0.768 (+/-0.173) for {'C': 1, 'gamma': 0.5, 'kernel': 'rbf'}
+0.634 (+/-0.066) for {'C': 10, 'gamma': 0.0001, 'kernel': 'rbf'}
+0.634 (+/-0.066) for {'C': 10, 'gamma': 0.001, 'kernel': 'rbf'}
+0.768 (+/-0.168) for {'C': 10, 'gamma': 0.01, 'kernel': 'rbf'}
+0.750 (+/-0.193) for {'C': 10, 'gamma': 0.1, 'kernel': 'rbf'}
+0.750 (+/-0.193) for {'C': 10, 'gamma': 0.2, 'kernel': 'rbf'}
+0.732 (+/-0.183) for {'C': 10, 'gamma': 0.5, 'kernel': 'rbf'}
+0.634 (+/-0.066) for {'C': 100, 'gamma': 0.0001, 'kernel': 'rbf'}
+0.768 (+/-0.168) for {'C': 100, 'gamma': 0.001, 'kernel': 'rbf'}
+0.759 (+/-0.178) for {'C': 100, 'gamma': 0.01, 'kernel': 'rbf'}
+0.741 (+/-0.164) for {'C': 100, 'gamma': 0.1, 'kernel': 'rbf'}
+0.723 (+/-0.175) for {'C': 100, 'gamma': 0.2, 'kernel': 'rbf'}
+0.732 (+/-0.183) for {'C': 100, 'gamma': 0.5, 'kernel': 'rbf'}
+0.768 (+/-0.168) for {'C': 1000, 'gamma': 0.0001, 'kernel': 'rbf'}
+0.759 (+/-0.178) for {'C': 1000, 'gamma': 0.001, 'kernel': 'rbf'}
+0.750 (+/-0.193) for {'C': 1000, 'gamma': 0.01, 'kernel': 'rbf'}
+0.732 (+/-0.183) for {'C': 1000, 'gamma': 0.1, 'kernel': 'rbf'}
+0.732 (+/-0.183) for {'C': 1000, 'gamma': 0.2, 'kernel': 'rbf'}
+0.696 (+/-0.164) for {'C': 1000, 'gamma': 0.5, 'kernel': 'rbf'}
+0.768 (+/-0.173) for {'C': 1, 'kernel': 'linear'}
+0.759 (+/-0.178) for {'C': 10, 'kernel': 'linear'}
+0.759 (+/-0.178) for {'C': 100, 'kernel': 'linear'}
+0.759 (+/-0.178) for {'C': 1000, 'kernel': 'linear'}
+```
 
 We have done a few things in above code. Let us break down these in steps.
 
@@ -297,18 +303,20 @@ print()
 
 Output:
 
-    Detailed classification report:
+::: callout-blue
+**Detailed classification report:**
 
-    The model is trained on the full development set.
-    The scores are computed on the full evaluation set.
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
 
-                 precision    recall  f1-score   support
+| id          | precision | recall | f1-score | support |
+| ----------- | --------- | ------ | -------- | ------- |
+| 0           | 1.00      | 1.00   | 1.00     | 12      |
+| 1           | 0.73      | 0.92   | 0.81     | 12      |
+| 2           | 0.91      | 0.71   | 0.80     | 14      |
+| avg / total | 0.88      | 0.87   | 0.87     | 38      |
 
-              0       1.00      1.00      1.00        12
-              1       0.73      0.92      0.81        12
-              2       0.91      0.71      0.80        14
-
-    avg / total       0.88      0.87      0.87        38
+:::
 
 Apart from accuracy, three major metrics to understand the task for classification are: precision,
 recall and f1-score.

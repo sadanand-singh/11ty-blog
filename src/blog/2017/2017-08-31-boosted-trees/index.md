@@ -22,12 +22,12 @@ into the details of yet another type of tree-based learning algorithms:
 Boosting, similar to [Bagging](/blog/tree-based-models/#bootstrap-aggregating-bagging), is a general
 class of learning algorithm where a set of weak learners are combined to get strong learners.
 
-::: callout-blue
+{% info %}
 For classification problems, a **weak learner** is defined to be a classifier which is only
 slightly correlated with the true classification (it can label examples better than random
 guessing). In contrast, a **strong learner** is a classifier that is arbitrarily well-correlated
 with the true classification.
-:::
+{% endinfo %}
 
 Recall that bagging involves creating multiple copies of the original training data set via
 bootstrapping, fitting a separate decision tree to each copy, and then combining all of the trees
@@ -220,7 +220,7 @@ plt.figure(figsize=(10,6))
 plot_confusion_matrix(cfm, classes=["<=50K", ">50K"], normalize=True)
 ```
 
-<img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1567365776/boosting/img1.png">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1567365776/boosting/img1.png" %}
 
 We find that our model has a much better predictive power (94.1%) for the dominant class (<=50K),
 while it has prediction rate of only 64.2% for the other class.
@@ -365,22 +365,24 @@ version of the algorithm. The details of these can be found
 [here](https://arxiv.org/pdf/1603.02754.pdf). XGBoost is one of the most famous machine learning
 libraries used in on-line machine learning competitions like Kaggle.
 
-> **Regularization**
-> Apart from regular gradient boosted trees, XGBoost provides two additional
-> types of regularization, by adding $L_1$ constraints on number of leaves ($J_b$) and $L_2$
-> constraints on the leaf weights ($\gamma_{jb}$) to the loss function. Mathematically, The loss
-> function is modified as follows (Loss Term at step b):
->
-> $$
-> \sum_{i=1}^{N} L\big( y_i, \hat{F_b}(x_i) \big) + \sum_{k=1}^b \Big (\eta J_k + \frac{1}{2} \lambda \left\lVert \gamma_{jk} \right\rVert^2 \Big )
-> $$
->
-> Here, the second term in the loss function, penalizes the complexity of the model, i.e. decision
-> tree functions.<br/><br/> **Additional Weak Learners**: Apart from decision trees, XGBoost also
-> supports [linear models](https://en.wikipedia.org/wiki/Linear_model) and
-> [DART (decision trees with dropout)](https://proceedings.mlr.press/v38/korlakaivinayak15.pdf) as
-> weak learners. In the DART algorithm, only a subset of available trees are considered in
-> calculating the pseudo-residuals on which the new trees are fit.
+{% info %}
+**Regularization**
+Apart from regular gradient boosted trees, XGBoost provides two additional
+types of regularization, by adding $L_1$ constraints on number of leaves ($J_b$) and $L_2$
+constraints on the leaf weights ($\gamma_{jb}$) to the loss function. Mathematically, The loss
+function is modified as follows (Loss Term at step b):
+
+$$
+\sum_{i=1}^{N} L\big( y_i, \hat{F_b}(x_i) \big) + \sum_{k=1}^b \Big (\eta J_k + \frac{1}{2} \lambda \left\lVert \gamma_{jk} \right\rVert^2 \Big )
+$$
+
+Here, the second term in the loss function, penalizes the complexity of the model, i.e. decision
+tree functions.<br/><br/> **Additional Weak Learners**: Apart from decision trees, XGBoost also
+supports [linear models](https://en.wikipedia.org/wiki/Linear_model) and
+[DART (decision trees with dropout)](https://proceedings.mlr.press/v38/korlakaivinayak15.pdf) as
+weak learners. In the DART algorithm, only a subset of available trees are considered in
+calculating the pseudo-residuals on which the new trees are fit.
+{% endinfo %}
 
 XGBoost has many parameters that control the fitting of the model. Below are some of the relevant
 parameters and tuning them would be helpful in the most common cases. _Please note that original
@@ -530,8 +532,10 @@ clf2.fit(x_train, y_train)
 
 This gives us the following optimal values for different parameters:
 
-    Best individual is: {'max_depth': 6, 'subsample': 1.0, 'colsample_bytree': 0.8, 'gamma': 0.2}
-    with fitness: 0.8710727557507447
+```text
+Best individual is: {'max_depth': 6, 'subsample': 1.0, 'colsample_bytree': 0.8, 'gamma': 0.2}
+with fitness: 0.8710727557507447
+```
 
 We can do a finer grid search to get more precise values. For this exercise, let us move on to the
 next stage of parameter tuning of XGBoost.
@@ -594,8 +598,10 @@ clf2.fit(x_train, y_train)
 
 The optimal set of parameters found by this are:
 
-    Best individual is: {'max_depth': 7, 'min_child_weight': 1}
-    with fitness: 0.8712877368631184
+```text
+Best individual is: {'max_depth': 7, 'min_child_weight': 1}
+with fitness: 0.8712877368631184
+```
 
 We can now use these parameters as fixed values and optimize regularization parameters:
 **reg_alpha** and **reg_lambda**.
@@ -629,10 +635,12 @@ clf2 = EvolutionaryAlgorithmSearchCV(
 clf2.fit(x_train, y_train)
 ```
 
+```text
 The optimal set of parameters found by this search are:
 
-    Best individual is: {'reg_alpha': 0.001, 'reg_lambda': 1}
-    with fitness: 0.8714720063880101
+Best individual is: {'reg_alpha': 0.001, 'reg_lambda': 1}
+with fitness: 0.8714720063880101
+```
 
 We can now decrease the learning rate by an order to magnitude to get a more stable model. However,
 we will also need to find the optimal value of number of estimators again using the `cv()` method.
@@ -816,10 +824,12 @@ clf2 = EvolutionaryAlgorithmSearchCV(
 clf2.fit(x_train, y_train)
 ```
 
+```text
 This gives the following set of optimal parameters:
 
-    Best individual is: {'max_depth': 6, 'subsample': 1.0, 'colsample_bytree': 0.75, 'num_leaves': 54}
-    with fitness: 0.870888486225853
+Best individual is: {'max_depth': 6, 'subsample': 1.0, 'colsample_bytree': 0.75, 'num_leaves': 54}
+with fitness: 0.870888486225853
+```
 
 Now, we can use grid search to fine tune the search of number of leaves parameter.
 

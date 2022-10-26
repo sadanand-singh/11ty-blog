@@ -11,7 +11,11 @@ spirit. And, I am hoping this is going to be the begining of maturity of the loo
 this blog. In the upcoming year, I plan to focus mainly on content, specifically related to
 medicine, AI and proramming.
 
-::: callout
+::: warning
+THIS POST IS NOT VALID ANYMORE AS I HAVE MOVED TO 11ty!
+:::
+
+{% info %}
 
 **Updates to this blog UI:**
 
@@ -20,7 +24,7 @@ medicine, AI and proramming.
 - Medium-like highlight text to share
 - [goatcounter](https://www.goatcounter.com/) for analytics
 
-:::
+{% endinfo %}
 
 Here is a list of all the new features that I have lately added to this:
 
@@ -154,12 +158,7 @@ A cool feature in [Medium](https://medium.com/) is the highlight menu that pops 
 some text. This menu contains buttons that allow you to perform certain actions on the selected
 text like highlight and share.
 
-<figure>
-    <img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1579064368/medium-share_ancyk2.gif">
-    <figcaption class="text-center">Picture Courtesy:
-      <a href='https://maxart2501.github.io/share-this/' target='_blank'> https://maxart2501.github.io </a>
-    </figcaption>
- </figure>
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1579064368/medium-share_ancyk2.gif", "Picture Courtesy:<a href='https://maxart2501.github.io/share-this/' target='_blank'> https://maxart2501.github.io </a>" %}
 
 You can have a look at my
 [implementation here](https://github.com/sadanand-singh/reckoning.dev/blob/master/src/components/HighlightShare/HighlightShare.js).

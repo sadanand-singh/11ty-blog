@@ -14,10 +14,10 @@ and packages as soon as the developers released them.
 [Plasma 5][plasma5] is the current generation
 of the desktop environment created by KDE primarily for Linux systems.
 
-::: callout-blue
+{% warning %}
 Please see [my latest post](/blog/complete-setup-arch-gnome) on installing Arch linux with Gnome 3 for
 an updated version of this guide.
-:::
+{% endwarning %}
 
 In this post, we will do a complete installation of Arch Linux with Plasma 5 as the desktop
 environment. Our setup will also involve encryption of the root partition that will be formatted in
