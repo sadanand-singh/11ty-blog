@@ -87,7 +87,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('relatedPosts', require('./lib/filters/related'));
   eleventyConfig.addFilter('featuredPosts', require('./lib/filters/featured'));
   eleventyConfig.addFilter('getTags', require('./lib/filters/getTags'));
-  eleventyConfig.addFilter('interestingPosts', require('./lib/filters/interesting-posts'));
+  eleventyConfig.addFilter('getPostsByTags', require('./lib/filters/get-by-tags'));
   eleventyConfig.addNunjucksFilter('limit', (arr, limit) => arr.slice(0, limit));
   eleventyConfig.addFilter('toAbsoluteUrl', toAbsoluteUrl);
 

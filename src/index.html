@@ -39,7 +39,7 @@ path: home
     </h3>
 
     {% set postsLimit = 5 %}
-    {% set postslist = collections.posts | interestingPosts %}
+    {% set postslist = collections.posts | getPostsByTags(['Machine Learning', 'MachineLearning', 'Deep Learning', 'DeepLearning', 'Productivity', 'Algorithms', 'Algorithm', 'Programming']) %}
     {% include "./_includes/partials/postslists.html" %}
 
 <div class="mt-5 border-t pt-4 border-slate-200 dark:border-gray-700" aria-label="hidden">
