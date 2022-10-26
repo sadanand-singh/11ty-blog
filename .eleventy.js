@@ -9,6 +9,7 @@ const site = require('./src/_data/site');
 const shortcodes = require('./lib/shortcodes/shortcodes.js')
 const pairedshortcodes = require('./lib/shortcodes/paired_shortcodes.js')
 const markdownLib = require('./lib/plugins/markdown');
+const codeClipboard = require("eleventy-plugin-code-clipboard");
 
 /**
  * Prefixes the given URL with the site's base URL.
@@ -17,10 +18,6 @@ const markdownLib = require('./lib/plugins/markdown');
 const toAbsoluteUrl = (url) => {
   return new URL(url, site.baseUrl).href;
 }
-
-
-
-
 
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
@@ -69,6 +66,18 @@ module.exports = function (eleventyConfig) {
 
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(codeClipboard, {
+    // Version of clipboard.js to use. default to 2.0.8.
+    clipboardJSVersion: '2.0.11',
+    // Name of clipboard button css class. default to code-copy.
+    // This class is also used to renderer
+    // Click event of element with this class is listened by clipboard.js.
+    buttonClass: 'code-copy',
+    // Message if copy succeeds. default to "Copied!"
+    successMessage: 'Copied!',
+    // Message if copy failes. default to "Failed..."
+    failureMessage: 'Failed...',
+  });
 
   // To Support .yaml Extension in _data
   // You may remove this if you can use JSON

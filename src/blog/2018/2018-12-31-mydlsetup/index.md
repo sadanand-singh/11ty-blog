@@ -3,8 +3,8 @@ title: 'My Deep Learning Workstation Setup'
 date: 2018-12-31
 tags:
   - Linux
-  - MachineLearning
-  - DeepLearning
+  - Machine Learning
+  - Deep Learning
 slug: mydlsetup
 ---
 

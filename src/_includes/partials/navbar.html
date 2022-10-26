@@ -6,9 +6,9 @@
         </svg>
     </button>
     <div class="relative z-10" x-show="isOpen">
-        <div class="w-full h-screen fixed bg-primary opacity-90"></div>
+        <div class="w-full h-screen fixed bg-gray-300 dark:text-gray-700 opacity-10"></div>
         <button type="button" aria-label="Nav" class="w-full h-screen fixed cursor-auto"></button>
-        <nav class="right-0 h-screen mt-auto py-48 px-6 fixed flex flex-col items-end font-medium text-primary tracking-widest">
+        <nav class="right-0 h-screen mt-auto py-48 px-6 fixed flex flex-col items-end font-medium text-gray-700 dark:text-gray-300 tracking-widest">
             <div class="flex-grow hover:text-indigo-700 dark:hover:text-indigo-300 transition duration-150 {{ 'font-bold text-indigo-600 dark:text-indigo-400' if '/' == page.url }}">
                 <a href="/">HOME</a>
             </div>

@@ -47,6 +47,16 @@ h3 {
   line-height: 2.5rem !important;
 }
 
+.tooltipped::before {
+  color: #fcf !important;
+  border-bottom-color: #ffccff !important;
+}
+
+.tooltipped::after {
+  background-color: #fcf !important;
+  color: #303 !important;
+}
+
 aside.sticky {
   top: 4rem;
 }
