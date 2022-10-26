@@ -51,6 +51,122 @@ aside.sticky {
   top: 4rem;
 }
 
+/* Define some standard callout blocks */
+.callout {
+  @apply px-8 py-4 mb-2 bg-yellow-200 dark:text-gray-900 dark:bg-yellow-400 rounded-t-none rounded-r-lg rounded-b-none rounded-l-none border-l-8 border-yellow-600 dark:border-yellow-700;
+}
+.callout a {
+  @apply text-gray-800;
+}
+.callout ul > li::before {
+  @apply bg-gray-900;
+}
+.callout h2,
+.callout h3 {
+  @apply mt-0 mb-1 text-2xl dark:text-gray-800;
+}
+.callout h3 {
+  @apply text-xl;
+}
+.callout p {
+  @apply mb-1 mt-0;
+}
+.callout strong {
+  @apply text-lg text-gray-800;
+}
+
+.callout-blue {
+  @apply px-8 py-4 mb-2 rounded-lg bg-blue-200 text-gray-900 dark:bg-blue-400 rounded-t-none rounded-r-lg rounded-b-none rounded-l-none border-l-8 border-blue-800;
+}
+.callout-blue a {
+  @apply text-gray-800;
+}
+.callout-blue ul > li::before {
+  @apply bg-gray-900;
+}
+.callout-blue h2,
+.callout -blue h3 {
+  @apply mt-0 mb-1 text-2xl dark:text-gray-800;
+}
+.callout-blue h3 {
+  @apply text-xl;
+}
+.callout-blue p {
+  @apply mb-1 mt-0;
+}
+.callout-blue strong {
+  @apply text-lg text-gray-800;
+}
+
+.callout-pink {
+  @apply px-8 py-4 mb-2 bg-pink-200 text-gray-900 dark:bg-pink-400 rounded-t-none rounded-r-lg rounded-b-none rounded-l-none border-l-8 border-pink-600 dark:border-pink-600;
+}
+.callout-pink a {
+  @apply text-gray-800;
+}
+.callout-pink ul > li::before {
+  @apply bg-gray-900;
+}
+.callout-pink h2,
+.callout-pink h3 {
+  @apply mt-0 mb-1 text-2xl dark:text-gray-800;
+}
+.callout-pink h3 {
+  @apply text-xl;
+}
+.callout-pink p {
+  @apply mb-1 mt-0;
+}
+.callout-pink strong {
+  @apply text-lg text-gray-800;
+}
+
+.callout-green {
+  @apply px-8 py-4 mb-2 bg-green-200 text-gray-900 dark:bg-green-400 rounded-t-none rounded-r-lg rounded-b-none rounded-l-none border-l-8 border-green-600 dark:border-green-900;
+}
+.callout-green a {
+  @apply text-gray-800;
+}
+.callout-green ul > li::before {
+  @apply bg-gray-900;
+}
+.callout-green h2,
+.callout-green h3 {
+  @apply mt-0 mb-1 text-2xl dark:text-gray-800;
+}
+.callout-green h3 {
+  @apply text-xl;
+}
+.callout-green p {
+  @apply mb-1 mt-0;
+}
+.callout-green strong {
+  @apply text-lg text-gray-800;
+}
+
+.warning {
+  @apply px-8 py-4 mb-4 bg-red-400 text-gray-50 text-gray-900 dark:bg-red-400 rounded-t-none rounded-r-lg rounded-b-none rounded-l-none border-l-8 border-red-800;
+}
+.warning a {
+  @apply text-gray-800;
+}
+.warning ul > li::before {
+  @apply bg-gray-900;
+}
+.warning h2,
+.warning h3 {
+  @apply mt-0 mb-1 text-2xl dark:text-gray-800;
+}
+.warning h3 {
+  @apply text-xl;
+}
+.warning p {
+  @apply mb-1 mt-0;
+}
+.warning strong {
+  @apply text-lg text-gray-800;
+}
+
 @tailwind components;
 
 /* Custom components using @apply */
@@ -61,7 +177,26 @@ aside.sticky {
 
 /* Syntax Highlighting*/
 
-body :not(pre) > code[class*="language-"],
+:not(pre) > code[class*='language-'] {
+  padding: 3px 5px;
+}
+
+:not(pre) > code {
+  padding: 3px 5px;
+  border: none;
+  font-family: Menlo, 'Roboto Mono', Courier New, monospace;
+  font-weight: 400;
+  border-radius: 4px;
+}
+
+.prose :where(code):not(:where([class~="not-prose"] *))::before {
+  content: "" !important;
+}
+
+.prose :where(code):not(:where([class~="not-prose"] *))::after {
+  content: "" !important;
+}
+
 body pre[class*="language-"] {
-  @apply bg-gray-800 dark:bg-gray-700;
+  @apply bg-slate-900;
 }

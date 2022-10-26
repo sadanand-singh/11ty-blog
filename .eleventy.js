@@ -6,6 +6,8 @@ const htmlmin = require("html-minifier");
 const readingTime = require('eleventy-plugin-reading-time');
 const pluginTOC = require('@thedigitalman/eleventy-plugin-toc-a11y');
 const site = require('./src/_data/site');
+const shortcodes = require('./lib/shortcodes/shortcodes.js')
+const pairedshortcodes = require('./lib/shortcodes/paired_shortcodes.js')
 
 /**
  * Prefixes the given URL with the site's base URL.
@@ -65,6 +67,25 @@ module.exports = function (eleventyConfig) {
     listItemClass: 'pl-1 active:text-indigo-500',
     listItemAnchorClass: 'transition duration-500 transform hover:translate-x-2 block mt-2 text-sm hover:text-indigo-600 ml-0 text-gray-700 dark:text-gray-300 dark:hover:text-indigo-400 font-semibold active:text-indigo-500'
   });
+
+  /**
+   * Shortcodes
+   * @link https://www.11ty.io/docs/shortcodes/
+   */
+   Object.keys(shortcodes).forEach((shortcodeName) => {
+    eleventyConfig.addShortcode(shortcodeName, shortcodes[shortcodeName])
+  })
+
+  /**
+   * Paired Shortcodes
+   * @link https://www.11ty.dev/docs/languages/nunjucks/#paired-shortcode
+   */
+  Object.keys(pairedshortcodes).forEach((shortcodeName) => {
+    eleventyConfig.addPairedShortcode(
+      shortcodeName,
+      pairedshortcodes[shortcodeName]
+    )
+  })
 
   eleventyConfig.setLibrary("md", markdownIt(options)
     .use(markdownItAnchor, opts)

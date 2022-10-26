@@ -4,6 +4,7 @@
   x-data="{ darkMode: localStorage.getItem('dark') === 'true'} "
   x-init="$watch('darkMode', val => localStorage.setItem('dark', val))"
   x-bind:class="{ 'dark': darkMode }"
+  class="scroll-smooth"
 >
   <head>
     <meta charset="UTF-8">
@@ -31,6 +32,8 @@
     <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
     {% if prism == true %}
       <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css"/>
     {% endif %}
     <script src="https://unpkg.com/feather-icons"></script>
   </head>
