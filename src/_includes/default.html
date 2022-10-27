@@ -19,11 +19,24 @@
     <meta name="msapplication-TileColor" content="#2d89ef">
     <meta name="msapplication-config" content="/static/img/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <meta property="og:title" content="{{ title }}">
-    <meta property="og:description" content="{{ description or site.description }}">
-    <meta property="og:url" content="{{ page.url | toAbsoluteUrl }}">
-    <meta property="og:type" content="{{ openGraph.type or 'website' }}">
-    <meta property="og:image" content="{{'/static/img/android-chrome-512x512.png' | toAbsoluteUrl }}">
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:url" content="{{ page.url | toAbsoluteUrl }}" />
+    {% if tags %}
+    {% set title_slug = ["/img/social-preview-images/", title | slug, "-preview.jpeg"] | join %}
+    <meta property="og:image" content="{{ title_slug | toAbsoluteUrl }}" />
+    <meta property="og:image:secure_url" content="{{ title_slug | toAbsoluteUrl }}" />
+    <meta name="twitter:image" content="{{ title_slug | toAbsoluteUrl }}" />
+    <meta property="og:type" content="article"/>
+    {% else %}
+    <meta property="og:image" content="{{'/static/img/android-chrome-512x512.png' | toAbsoluteUrl }}" />
+    <meta property="og:image:secure_url" content="{{'/static/img/android-chrome-512x512.png' | toAbsoluteUrl }}" />
+    <meta name="twitter:image" content="{{'/static/img/android-chrome-512x512.png' | toAbsoluteUrl }}" />
+    <meta property="og:type" content="blog"/>
+    {% endif %}
+    <meta property="og:description" content="{{ description or site.description }}"/>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@reckoningdev" />
+    <meta name="twitter:creator" content="@reckoningdev" />
     <title>
       {{title}}
     </title>
