@@ -6,7 +6,7 @@ tags:
   - Machine Learning
 slug: track-dl-experiments
 toc: false
-featured: true
+featured: false
 ---
 
 Managing multiple research experiments at a time can be overwhelming. The same applies to deep
