@@ -22,21 +22,24 @@ environment. Our setup will also involve encryption of the root partition that w
 [btrfs].
 
 ::: callout
-I do not wish to repeat [Arch Installation Guide](https://wiki.archlinux.org/index.php/installation_guide) here.
+I do not wish to repeat [Arch Installation Guide][arch guide] here.
 
 Do not forget about [Arch Wiki](https://wiki.archlinux.org/), the best documentation in the world! Most of the
 content in this post has been compiled from the [Arch Wiki](https://wiki.archlinux.org/) and my personal experiences.
 :::
 
-[arch-wiki]: https://wiki.archlinux.org/
 [arch guide]: https://wiki.archlinux.org/index.php/installation_guide
 [arch-linux]: https://www.archlinux.org
 [gnome3]: https://www.gnome.org/gnome-3/
 [btrfs]: https://en.wikipedia.org/wiki/Btrfs
 
 {% columns %}
-  {% cols %} <figure><img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1544988349/images/gnome3/SystemInfo.png"><figcaption class="text-center">System Info</figcaption></figure> {% endcols %}
-  {% cols %} <figure><img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1544988349/images/gnome3/ApplicationMenu.png"><figcaption class="text-center">Application Menu</figcaption></figure> {% endcols %}
+  {% cols %}
+    {% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1544988349/images/gnome3/SystemInfo.png", "System Info" %}
+  {% endcols %}
+  {% cols %}
+    {% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1544988349/images/gnome3/ApplicationMenu.png", "Application Menu" %}
+  {% endcols %}
 {% endcolumns %}
 
 ## System Details
@@ -182,8 +185,12 @@ cryptsetup luksOpen /dev/sda2 root
 ```
 
 {% columns %}
-  {% cols %} <figure><img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1544988350/images/gnome3/workspaces.png"><figcaption class="text-center">Gnome Workspaces</figcaption></figure> {% endcols %}
-  {% cols %} <figure><img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1544988349/images/gnome3/Apps.png"><figcaption class="text-center">Gnome Applications</figcaption></figure> {% endcols %}
+  {% cols %}
+    {% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1544988350/images/gnome3/workspaces.png", "Gnome Workspaces" %}
+  {% endcols %}
+  {% cols %}
+    {% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1544988349/images/gnome3/Apps.png", "Gnome Applications" %}
+  {% endcols %}
 {% endcolumns %}
 
 **Automatic Key Login from an USB/SD Card**
@@ -404,8 +411,12 @@ options ro cryptdevice=UUID=33333333-3333-3333-3333-333333333333:luks-33333333-3
 ```
 
 {% columns %}
-  {% cols "-mb-5 p-1" %} <figure><img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1544988348/images/gnome3/editors.png"><figcaption class="text-center">Editors</figcaption></figure> {% endcols %}
-  {% cols "-mb-5 p-1" %} <figure><img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1544988350/images/gnome3/pcloud.png"><figcaption class="text-center">pCloud App</figcaption></figure> {% endcols %}
+  {% cols "-mb-5 p-1" %}
+    {% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1544988348/images/gnome3/editors.png", "Editors" %}
+  {% endcols %}
+  {% cols "-mb-5 p-1" %}
+    {% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1544988350/images/gnome3/pcloud.png", "pCloud App" %}
+  {% endcols %}
 {% endcolumns %}
 
 ## Network Setup

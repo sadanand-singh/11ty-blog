@@ -2,6 +2,7 @@
 title: 'Puzzle 1: Train Speed Problem'
 slug: 'train-speed-problem'
 date: 2014-08-23
+toc: false
 tags:
   - Algorithms
 ---

@@ -37,7 +37,7 @@ one is worth all the trouble!
 - Salt to taste
 - 1 cup Milk or Cream
 
-<img class="w-full max-w-2xl mx-auto" src="https://res.cloudinary.com/sadanandsingh/image/upload/v1496963332/PalakPaneer2_fdmyku.jpg">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1496963332/PalakPaneer2_fdmyku.jpg" %}
 
 ## Preparation
 
@@ -50,7 +50,7 @@ one is worth all the trouble!
 - Strain boiled spinach leaves under cold water.
 - In a blender, make a puree of leaves along with ginger, garlic and milk or cream.
 
-<img class="w-full max-w-2xl mx-auto" src="https://res.cloudinary.com/sadanandsingh/image/upload/v1496963333/PalakPaneer3_ckjnjp.jpg">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1496963333/PalakPaneer3_ckjnjp.jpg" %}
 
 ## Curry for _Paneer_
 
@@ -66,7 +66,7 @@ one is worth all the trouble!
 
 Let it cool before serving. It can be served with Indian Breads or rice.
 
-<img class="w-full max-w-2xl mx-auto" src="https://res.cloudinary.com/sadanandsingh/image/upload/v1496963332/PalakPaneer_me9asd.jpg">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1496963332/PalakPaneer_me9asd.jpg" %}
 
 ## Interesting Facts
 

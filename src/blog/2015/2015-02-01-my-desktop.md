@@ -10,7 +10,7 @@ tags:
 It has been long due. Just built a new desktop. Here are different parts I used to build this
 beauty. (Updated Cost)
 
-<img class="w-full max-w-2xl mx-auto" src="https://res.cloudinary.com/sadanandsingh/image/upload/v1596315538/desktop-cpu_js8xpy.jpg">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1596315538/desktop-cpu_js8xpy.jpg" %}
 
 <br/>
 

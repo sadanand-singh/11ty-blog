@@ -16,7 +16,7 @@ in a quite spicy flavor.
 So, here is my super quick and tasty recipe for these noodles. It takes less than 12 minutes ( 4
 Minutes Preparation + 8 Minutes Cooking).
 
-<img class="w-full max-w-2xl mx-auto" src="https://res.cloudinary.com/sadanandsingh/image/upload/v1496963332/desiNoodles_s0ez5g.jpg">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1496963332/desiNoodles_s0ez5g.jpg" %}
 
 ## Ingredients
 
@@ -51,7 +51,7 @@ Minutes Preparation + 8 Minutes Cooking).
 Let it cool before serving. You can use some ketchup or sauce with it. I like adding peanuts to it
 while frying onions.
 
-<img class="w-full max-w-2xl mx-auto" src="https://res.cloudinary.com/sadanandsingh/image/upload/v1496963332/desiNoodles_final_tqeyey.jpg">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1496963332/desiNoodles_final_tqeyey.jpg" %}
 
 ## Interesting Facts
 

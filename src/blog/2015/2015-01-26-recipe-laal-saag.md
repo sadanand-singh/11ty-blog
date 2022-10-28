@@ -16,7 +16,7 @@ strikingly similar to the red leaves that I used to have back home in India.
 So, here is my super fast and healthy recipe for these red leaves. It took me just 10 minutes ( 5
 Minutes Preparation + 5 Minutes Cooking).
 
-<img class="w-full max-w-2xl mx-auto" src="https://res.cloudinary.com/sadanandsingh/image/upload/v1496963333/redSaag_vyrm11.jpg">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1496963333/redSaag_vyrm11.jpg" %}
 
 ## Ingredients
 
@@ -41,7 +41,7 @@ Minutes Preparation + 5 Minutes Cooking).
 
 You can serve this with any Indian bread, or with rice and lentils (_Daal_).
 
-<img class="w-full max-w-2xl mx-auto" src="https://res.cloudinary.com/sadanandsingh/image/upload/v1496963333/redSaag_final_ktfqua.jpg">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1496963333/redSaag_final_ktfqua.jpg" %}
 
 ## Interesting Facts
 

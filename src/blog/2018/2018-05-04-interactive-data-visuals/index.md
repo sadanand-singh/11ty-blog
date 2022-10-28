@@ -12,9 +12,9 @@ is what happens when you have something specific you want to show an audience. T
 **explanatory** visualizations is to tell stories - they’re carefully constructed to surface key
 findings.
 
-::: callout-blue
+{% warning %}
 **NOTE: Please note that the interactive plots here do not load, as it requires loading a really large data and javascript file!**
-:::
+{% endwarning %}
 
 Exploratory analysis, on the other hand, is what you do to get familiar with the data. You may
 start out with a hypothesis or question, or you may just really be delving into the data to

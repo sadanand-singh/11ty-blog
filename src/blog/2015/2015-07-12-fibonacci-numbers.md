@@ -57,7 +57,7 @@ device to calculate say $F_{200}$.
 
 Here is a simple plot of first few Fibonacci numbers:
 
-<img class="w-full max-w-2xl mx-auto" src="https://res.cloudinary.com/sadanandsingh/image/upload/v1567314854/fibonacci_cyif3a.png">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1567314854/fibonacci_cyif3a.png" %}
 
 The most basic algorithm, that comes to mind is a recursive scheme that taps directly into the
 above definition of Fibonacci series.

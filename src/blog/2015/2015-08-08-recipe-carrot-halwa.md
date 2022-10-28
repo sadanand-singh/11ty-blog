@@ -13,7 +13,7 @@ But, its never too late. Especially, when you can start with some exotic food!
 
 Carrot halwa is a common north Indian dessert, healthy carrots cooked in milk and mango puree.
 
-<img class="w-full max-w-2xl mx-auto" src="https://res.cloudinary.com/sadanandsingh/image/upload/v1545501875/project/organic-carrot.jpg">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1545501875/project/organic-carrot.jpg" %}
 
 ## Ingredients
 
@@ -38,8 +38,7 @@ Carrot halwa is a common north Indian dessert, healthy carrots cooked in milk an
 - Let the halwa cool down.
 - Garnish it with nuts and dried milk.
 
-<img class="w-full max-w-2xl mx-auto" src="https://i.pinimg.com/736x/92/e8/df/92e8dfac49489ef1c549701ea54f4ea0.jpg">
-
+{% fig "https://i.pinimg.com/736x/92/e8/df/92e8dfac49489ef1c549701ea54f4ea0.jpg" %}
 ## Interesting Facts
 
 - [Nutritional Value](https://www.nutrition-and-you.com/carrots.html) of carrots.

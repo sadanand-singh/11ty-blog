@@ -25,7 +25,7 @@ other packages using the powerful command pallet. Hit `ctrl + shift + P` and typ
 _Package Control : Install Package_. Now you can search for any package that you wish to install,
 and then press _Enter_ to install it.
 
-![](https://res.cloudinary.com/sadanandsingh/image/upload/v1544988652/images/sublime/Settings.png)
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1544988652/images/sublime/Settings.png" %}
 
 Here is a list of packages that I currently use:
 
@@ -117,7 +117,7 @@ transparent after a while and you can focus on the content instead. I prefer to 
 of 99. By default black likes to convert all strings to double quotes, while I prefer single
 quotes. Following configuration is needed for these modifications:
 
-![](https://res.cloudinary.com/sadanandsingh/image/upload/v1544988652/images/sublime/MarkdownEditing.png)
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1544988652/images/sublime/MarkdownEditing.png" %}
 
 [black]: https://github.com/ambv/black
 

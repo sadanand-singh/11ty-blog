@@ -2,6 +2,7 @@
 title: 'Puzzle 2: Consumer Transport Problem'
 slug: 'consumer-transport-problem'
 date: 2014-09-05
+toc: false
 tags:
   - Algorithms
 ---

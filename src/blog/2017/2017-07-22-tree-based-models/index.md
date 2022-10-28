@@ -41,7 +41,7 @@ of Previous Loan** for all customers. The task is to predict the risk level of c
 _creditable_ or _not creditable_. One sample solution for this problem can be depicted using the
 following decision tree:
 
-<img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1567365989/tree/img1.png">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1567365989/tree/img1.png" %}
 
 Classification and Regression Trees or
 [CART](https://en.wikipedia.org/wiki/Predictive_analytics#Classification_and_regression_trees_.28CART.29)
@@ -304,25 +304,24 @@ Now that we have cleaned the data, let us look how balanced out data set is:
 
 ```python
 df_train_set.Income.value_counts()
+
+# Output:
+
+#   <=50K    24720
+#   >50K      7841
+#   Name: Income, dtype: int64
 ```
-
-Output:
-
-    <=50K    24720
-    >50K      7841
-    Name: Income, dtype: int64
 
 Similarly frequency counts for the test set are:
 
 ```python
 df_test_set.Income.value_counts()
+
+# Output
+#   <=50K    12435
+#   >50K      3846
+#   Name: Income, dtype: int64
 ```
-
-Output:
-
-    <=50K    12435
-    >50K      3846
-    Name: Income, dtype: int64
 
 In both training and the test data sets, we find **<=50K** class to be about 3 times larger than
 the **>50K** class. This is begging us to treat this problem differently as this is a problem of
@@ -343,7 +342,7 @@ Let us first see how **Relationships** and **MaritalStatus** features are interr
 )
 ```
 
-<img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1567366123/tree/img2.png">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1567366123/tree/img2.png" %}
 
 Let us look at effect of **Education** (measured in terms of bins of no. of years of education) on
 **Income** for different Age groups.
@@ -356,7 +355,7 @@ Let us look at effect of **Education** (measured in terms of bins of no. of year
 )
 ```
 
-<img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1567366124/tree/img3.png">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1567366124/tree/img3.png" %}
 
 Recently, there has been a lot of talk about effect of gender based bias/gap in the income. We can
 look at the effect of **Education** and **Race** for males and females separately.
@@ -369,7 +368,7 @@ look at the effect of **Education** and **Race** for males and females separatel
 )
 ```
 
-<img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1567366124/tree/img4.png">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1567366124/tree/img4.png" %}
 
 ```python
 (ggplot(df_train_set, aes(x = "Race", fill = "Income"))
@@ -379,7 +378,7 @@ look at the effect of **Education** and **Race** for males and females separatel
 )
 ```
 
-<img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1567366124/tree/img5.png">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1567366124/tree/img5.png" %}
 
 Until now, we have only looked at the inter-dependence of non-numeric features. Let us now look at
 the effect of **CapitalGain** and **CapitalLoss** on income.
@@ -390,7 +389,7 @@ the effect of **CapitalGain** and **CapitalLoss** on income.
 )
 ```
 
-<img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1567366124/tree/img6.png">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1567366124/tree/img6.png" %}
 
 ```python
 (ggplot(df_train_set, aes(x="Income", y="CapitalLoss"))
@@ -398,7 +397,7 @@ the effect of **CapitalGain** and **CapitalLoss** on income.
 )
 ```
 
-<img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1567366125/tree/img7.png">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1567366125/tree/img7.png" %}
 
 #### Tree Classifier
 
@@ -478,7 +477,7 @@ def plot_confusion_matrix(cm, classes, normalize=False):
     for i, j in itertools.product(range(cm.shape[0]), range(cm.shape[1])):
         plt.text(j, i, cm[i, j],
                  horizontalalignment="center",
-                 color="white" if cm[i, j] > thresh else "black")
+                 color="white" if cm[i, j] thresh else "black")
 
     plt.tight_layout()
     plt.ylabel('True label')
@@ -494,7 +493,7 @@ plt.figure(figsize=(10,6))
 plot_confusion_matrix(cfm, classes=["<=50K", ">50K"], normalize=True)
 ```
 
-<img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1567366124/tree/img8.png">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1567366124/tree/img8.png" %}
 
 We find that the majority class (<=50K Income) has an accuracy of 90.5%, while the minority class
 (>50K Income) has an accuracy of only 60.8%.
@@ -515,14 +514,15 @@ parameters = {
 clf = GridSearchCV(treeClassifier, parameters, cv=5, n_jobs=4)
 clf.fit(x_train, y_train)
 clf.best_score_, clf.score(x_test, y_test), clf.best_params_
-```
 
-    (0.85934092933263717,
-     0.85897672133161351,
-     {'max_depth': 16,
-      'max_features': 9,
-      'min_samples_leaf': 16,
-      'min_samples_split': 8})
+# Output
+#    (0.85934092933263717,
+#     0.85897672133161351,
+#     {'max_depth': 16,
+#      'max_features': 9,
+#      'min_samples_leaf': 16,
+#      'min_samples_split': 8})
+```
 
 With the optimization, we find the accuracy to increase to 85.9%. In the above, we can also look at
 the parameters of the best model. Now, let us have a look at the confusion matrix of the optimized
@@ -535,7 +535,7 @@ plt.figure(figsize=(10,6))
 plot_confusion_matrix(cfm, classes=["<=50K", ">50K"], normalize=True)
 ```
 
-<img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1567366124/tree/img9.png">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1567366124/tree/img9.png" %}
 
 With optimization, we find an increase in the prediction accuracy of both classes.
 
@@ -568,35 +568,38 @@ Most of these limitations can be easily overcome by using several improvements o
 In the following sections, we will be looking some of these concepts, mainly bagging, and random
 forests.
 
-> **Tree Pruning** <br/><br/> Since decision trees have a very high tendency to over-fit the data,
-> a smaller tree with fewer splits (that is, fewer regions $R_1, \ldots, R_J$) might lead to lower
-> variance and better interpretation at the cost of a little bias. One possible alternative to the
-> process described above is to build the tree only so long as the decrease in the node impurity
-> measure, $Q_m$ due to each split exceeds some (high) threshold. However, due to greedy nature of
-> the splitting algorithm, it is too short-sighted since a seemingly worthless split early on in
-> the tree might be followed by a very good split i.e., a split that leads to a large reduction in
-> $Q_m$ later on.<br/><br/> Therefore, a better strategy is to grow a very large tree $T_0$, and
-> then prune it back in order to obtain a subtree. There can be several strategies to pruning, Cost
-> complexity pruning, also known as weakest link pruning in one way to do this effectively. Rather
-> than considering every possible subtree, a sequence of trees indexed by a non-negative tuning
-> parameter $\alpha$ is considered. For each value of $\alpha$ there corresponds a subtree
-> $T \subset T_0$ such that
->
-> $$
-> \sum_{m=1}^{|T|}\sum_{i:x_i \in R_m}\big(y_i-\hat{y}_{R_m}\big)^2 + \alpha |T|
-> $$
->
-> is as small as possible. Here $|T|$ indicates the number of terminal nodes of the tree $T$, $R_m$
-> is the rectangle (i.e. the subset of predictor space) corresponding to the $m^{th}$ terminal
-> node, and $\hat{y}_{R_m}$ is the predicted response associated with $R_m$, i.e., the mean (or
-> mode in the case of classification trees) of the training observations in $R_m$. <br/><br/>The
-> tuning parameter $\alpha$ controls a trade-off between the subtree’s complexity and its fit to
-> the training data. When $\alpha = 0$, then the subtree $T$ will simply equal $T_0$. As $\alpha$
-> increases, there is a price to pay for having a tree with many terminal nodes, and so the above
-> equation will tend to be minimized for a smaller subtree. The pruning parameter $\alpha$ can be
-> selected using some kind of cross validation. <br/><br/> Note that
-> [sklearn.tree](https://scikit-learn.org/stable/modules/classes.html#module-sklearn.tree) decision
-> tree classifier (and regressor) does not currently support pruning.
+{% info %}
+**Tree Pruning** <br/><br/Since decision trees have a very high tendency to over-fit the data,
+a smaller tree with fewer splits (that is, fewer regions $R_1, \ldots, R_J$) might lead to lower
+variance and better interpretation at the cost of a little bias. One possible alternative to the
+process described above is to build the tree only so long as the decrease in the node impurity
+measure, $Q_m$ due to each split exceeds some (high) threshold. However, due to greedy nature of
+the splitting algorithm, it is too short-sighted since a seemingly worthless split early on in
+the tree might be followed by a very good split i.e., a split that leads to a large reduction in
+$Q_m$ later on.<br/><br/Therefore, a better strategy is to grow a very large tree $T_0$, and
+then prune it back in order to obtain a subtree. There can be several strategies to pruning, Cost
+complexity pruning, also known as weakest link pruning in one way to do this effectively. Rather
+than considering every possible subtree, a sequence of trees indexed by a non-negative tuning
+parameter $\alpha$ is considered. For each value of $\alpha$ there corresponds a subtree
+$T \subset T_0$ such that
+
+$$
+\sum_{m=1}^{|T|}\sum_{i:x_i \in R_m}\big(y_i-\hat{y}_{R_m}\big)^2 + \alpha |T|
+$$
+
+is as small as possible. Here $|T|$ indicates the number of terminal nodes of the tree $T$, $R_m$
+is the rectangle (i.e. the subset of predictor space) corresponding to the $m^{th}$ terminal
+node, and $\hat{y}_{R_m}$ is the predicted response associated with $R_m$, i.e., the mean (or
+mode in the case of classification trees) of the training observations in $R_m$.
+<br/><br/>The
+tuning parameter $\alpha$ controls a trade-off between the subtree’s complexity and its fit to
+the training data. When $\alpha = 0$, then the subtree $T$ will simply equal $T_0$. As $\alpha$
+increases, there is a price to pay for having a tree with many terminal nodes, and so the above
+equation will tend to be minimized for a smaller subtree. The pruning parameter $\alpha$ can be
+selected using some kind of cross validation. <br/><br/>Note that
+[sklearn.tree](https://scikit-learn.org/stable/modules/classes.html#module-sklearn.tree) decision
+tree classifier (and regressor) does not currently support pruning.
+{% endinfo %}
 
 ## Bootstrap Aggregating (Bagging)
 
@@ -729,7 +732,7 @@ plt.figure(figsize=(10,6))
 plot_confusion_matrix(cfm, classes=["<=50K", ">50K"], normalize=True)
 ```
 
-<img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1567366124/tree/img10.png">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1567366124/tree/img10.png" %}
 
 As discussed before, random forest models also provide us with a metric of feature importance. We
 can see importance of different features in our current model as below:
@@ -745,7 +748,7 @@ plt.yticks(range(len(indices)), cols)
 plt.xlabel('Relative Importance')
 ```
 
-<img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1567366125/tree/img11.png">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1567366125/tree/img11.png" %}
 
 Now, let us try to optimize our random forest model. Again, this can be done using the
 GridSearchCV() apt with 5-fold cross-validation as below:
@@ -785,7 +788,7 @@ plt.figure(figsize=(10,6))
 plot_confusion_matrix(cfm, classes=["<=50K", ">50K"], normalize=True)
 ```
 
-<img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1567366124/tree/img12.png">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1567366124/tree/img12.png" %}
 
 Finally, let us also look at the feature importance from the best model.
 
@@ -800,7 +803,7 @@ plt.yticks(range(len(indices)), cols)
 plt.xlabel('Relative Importance')
 ```
 
-<img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1567366122/tree/im13.png">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1567366122/tree/im13.png" %}
 
 We can see the answer to be significantly different than the previous random forest model. This is
 a common issue with this class of models! In the next post, I will be talking about boosted tree

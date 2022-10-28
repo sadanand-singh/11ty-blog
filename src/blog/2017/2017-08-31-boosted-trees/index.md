@@ -705,7 +705,7 @@ plt.figure(figsize=(10,6))
 plot_confusion_matrix(cfm, classes=["<=50K", ">50K"], normalize=True)
 ```
 
-<img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1567365776/boosting/img2.png">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1567365776/boosting/img2.png" %}
 
 We see the largest accuracy of the less abundant class with an accuracy of 64.9%, compared to the
 previous best of 64.2%. We can also look the importance of different features for this XGBoost
@@ -722,7 +722,7 @@ plt.yticks(range(len(indices)), cols)
 plt.xlabel('Relative Importance')
 ```
 
-<img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1567365777/boosting/img3.png">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1567365777/boosting/img3.png" %}
 
 ## LightGBM
 
@@ -736,8 +736,12 @@ tree leaf-wise with the best fit whereas other boosting algorithms split the tre
 level-wise. The two approaches can be best visualized in the following illustrations:
 
 {% columns %}
-  {% cols %} <figure><img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1596309790/boosting/level_wise.png"><figcaption class="text-center">Level-wise Splits</figcaption></figure> {% endcols %}
-  {% cols %} <figure><img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1596309790/boosting/leaf_wise.png"><figcaption class="text-center">Leaf-wise Splits</figcaption></figure> {% endcols %}
+  {% cols %}
+    {% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1596309790/boosting/level_wise.png", "Level-wise Splits" %}
+  {% endcols %}
+  {% cols %}
+    {% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1596309790/boosting/leaf_wise.png", "Leaf-wise Splits" %}
+  {% endcols %}
 {% endcolumns %}
 
 Leaf-wise splits lead to increase in complexity and may lead to over-fitting, and hence extra
@@ -989,7 +993,7 @@ plt.figure(figsize=(10,6))
 plot_confusion_matrix(cfm, classes=["<=50K", ">50K"], normalize=True)
 ```
 
-<img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1567365777/boosting/img4.png">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1567365777/boosting/img4.png" %}
 
 We find the results to be slightly better than XGBoost with 65% accuracy of the less abundant >50K
 salary class. We can also look the importance of different features in this model:
@@ -1005,7 +1009,7 @@ plt.yticks(range(len(indices)), cols)
 plt.xlabel('Relative Importance')
 ```
 
-<img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1567365777/boosting/img5.png">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1567365777/boosting/img5.png" %}
 
 ## Concluding Remarks
 

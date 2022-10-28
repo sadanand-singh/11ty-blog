@@ -94,8 +94,12 @@ effects. The linearity assumption can best be tested with scatter plots, the fol
 depict two cases, where no and little linearity is present.
 
 {% columns %}
-  {% cols %} <figure><img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1596304997/linearregression01_gwyihw.jpg"><figcaption class="text-center">Small Amount of Linearity</figcaption></figure> {% endcols %}
-  {% cols %} <figure><img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1596305002/linearregression02_x5dcb8.jpg"><figcaption class="text-center">No Linearity</figcaption></figure> {% endcols %}
+  {% cols %}
+    {% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1596304997/linearregression01_gwyihw.jpg", "Small Amount of Linearity" %}
+  {% endcols %}
+  {% cols %}
+    {% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1596305002/linearregression02_x5dcb8.jpg", "No Linearity" %}
+  {% endcols %}
 {% endcolumns %}
 
 In the cases like these, one should try some non-linear transformations first to make the
@@ -107,8 +111,12 @@ The linear regression analysis requires all variables to be multivariate normal.
 can best be checked with a histogram or a [Q-Q Plot][qqplot].
 
 {% columns %}
-  {% cols %} <figure><img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1545762679/Normal_normal_qq.svg_ptetvk.png"><figcaption class="text-center">QQ Plot for Normal Dist Data</figcaption></figure> {% endcols %}
-  {% cols %} <figure><img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1545762768/1920px-Normal_exponential_qq.svg_nrgiqh.png"><figcaption class="text-center">QQ Plot for Exponential Dist Data</figcaption></figure> {% endcols %}
+  {% cols %}
+    {% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1545762679/Normal_normal_qq.svg_ptetvk.png", "QQ Plot for Normal Dist Data" %}
+  {% endcols %}
+  {% cols %}
+    {% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1545762768/1920px-Normal_exponential_qq.svg_nrgiqh.png", "QQ Plot for Exponential Dist Data" %}
+  {% endcols %}
 {% endcolumns %}
 
 The linear relationship in the first plot shows the normality, however in the second plot, since
@@ -176,8 +184,12 @@ line). The following scatter plots show examples of data that are not homoscedas
 heteroscedastic):
 
 {% columns %}
-  {% cols %} <figure><img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1596304529/linearregression06_hgwntv.jpg"><figcaption class="text-center">None-homoscedastic data example 1</figcaption></figure> {% endcols %}
-  {% cols %} <figure><img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1596304559/linearregression07_mpiycr.jpg"><figcaption class="text-center">None-homoscedastic data example 2</figcaption></figure> {% endcols %}
+  {% cols %}
+    {% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1596304529/linearregression06_hgwntv.jpg", "None-homoscedastic data example 1" %}
+  {% endcols %}
+  {% cols %}
+    {% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1596304559/linearregression07_mpiycr.jpg", "None-homoscedastic data example 2" %}
+  {% endcols %}
 {% endcolumns %}
 
 The [Goldfeld-Quandt Test][gqtest] can also be used to test for heteroscedasticity. The test splits
@@ -401,10 +413,7 @@ should be able to convince you the wide application of these methods across diff
 
 ### Polynomial Regression
 
-<figure>
-  <img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1545780650/poly_regress_srbjmr.png">
-  <figcaption class="text-center">Polynomial Regression Example</figcaption>
-</figure>
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1545780650/poly_regress_srbjmr.png", "Polynomial Regression Example" %}
 
 Polynomial regression is a form of regression analysis in which the relationship between the
 independent variable $x$ and the dependent variable $y$ is modelled as an n-th degree polynomial in
@@ -431,10 +440,7 @@ polynomial is just an additional hyper parameter of the model.
 
 ### Signal Smoothing
 
-<figure>
-  <img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1545780346/smooth_rhpllc.png">
-  <figcaption class="text-center">Signal Smoothing Example</figcaption>
-</figure>
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1545780346/smooth_rhpllc.png", "Signal Smoothing Example" %}
 
 One approach to smooth a noisy signal is based on least squares weighted regularization. The idea
 is to obtain a signal similar to the noisy one, but smoother. The smoothness of a signal can be

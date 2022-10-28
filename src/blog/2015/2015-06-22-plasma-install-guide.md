@@ -15,7 +15,7 @@ can now login into our new system as root using the password that we set.
 an up to date version of this guide.
 :::
 
-<img class="w-full max-w-2xl mx-auto" src="https://res.cloudinary.com/sadanandsingh/image/upload/v1545502051/project/arch-plasma.jpg">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1545502051/project/arch-plasma.jpg" %}
 
 Now, we will proceed further to install the Plasma 5 desktop.
 
