@@ -48,7 +48,6 @@ all the tools I have been interested in - mdx, theme-ui, and styled components!
 [theme-ui]: https://theme-ui.com/
 [styled components]: https://emotion.sh/docs/styled
 
-
 {% columns %}
   {% cols %}
     {% fig "https://res.cloudinary.com/sadanandsingh/image/upload/c_scale,w_640/v1586741108/novela/novela_light.png", "Light Theme" %}
@@ -139,38 +138,38 @@ Then, in `@narative/gatsby-theme-novela/src/gatsby/node/onCreateNode.js`, I adde
 new field for it (See the highlighted code below).
 
 ```diff-js
-...
-const moment = require('moment-timezone');
-require('dotenv');
-...
+  ...
+  const moment = require('moment-timezone');
+  require('dotenv');
+  ...
 
-if (node.internal.type === `Mdx` && source === contentPath) {
-    const getDraftValue = ({ node, options }) => {
-      const { fieldName, timezone } = options;
-      if (!node.frontmatter) {
-        return false;
-      }
+  if (node.internal.type === `Mdx` && source === contentPath) {
+      const getDraftValue = ({ node, options }) => {
+        const { fieldName, timezone } = options;
+        if (!node.frontmatter) {
+          return false;
+        }
 
-      if (node.frontmatter.hasOwnProperty(fieldName)) {
-        return node.frontmatter[fieldName];
-      }
+        if (node.frontmatter.hasOwnProperty(fieldName)) {
+          return node.frontmatter[fieldName];
+        }
 
-      if (!node.frontmatter.date) {
-        return false;
-      }
+        if (!node.frontmatter.date) {
+          return false;
+        }
 
-      const dateNode = moment.tz(node.frontmatter.date, timezone);
-      const dateNow = moment().tz(timezone);
-      const value = dateNow.isSameOrBefore(dateNode);
+        const dateNode = moment.tz(node.frontmatter.date, timezone);
+        const dateNow = moment().tz(timezone);
+        const value = dateNow.isSameOrBefore(dateNode);
 
-      return value;
-    };
+        return value;
+      };
 
-    const options = {
-      fieldName: 'draft',
-      timezone: 'UTC',
-      force: process.env.NODE_ENV === 'development', // if developmet, force to be NOT draft
-    };
+      const options = {
+        fieldName: 'draft',
+        timezone: 'UTC',
+        force: process.env.NODE_ENV === 'development', // if developmet, force to be NOT draft
+      };
 
 +    const fieldData = {
 +      author: node.frontmatter.author,
