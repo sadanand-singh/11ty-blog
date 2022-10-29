@@ -22,7 +22,7 @@
     <meta property="og:title" content="{{ title }}" />
     <meta property="og:url" content="{{ page.url | toAbsoluteUrl }}" />
     {% if tags %}
-    {% set title_slug = ["/img/social-preview-images/", title | slug, "-preview.jpeg"] | join %}
+    {% set title_slug = ["/img/social-preview-images/", title | slugify, "-preview.jpeg"] | join %}
     <meta property="og:image" content="{{ title_slug | toAbsoluteUrl }}" />
     <meta property="og:image:secure_url" content="{{ title_slug | toAbsoluteUrl }}" />
     <meta name="twitter:image" content="{{ title_slug | toAbsoluteUrl }}" />
