@@ -1,4 +1,10 @@
 {
+  "name": "reckoning.dev",
+  "private": true,
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": "git@github.com:sadanand-singh/11ty-blog.git",
+  "author": "Sadanand Singh <mrg6nm2ji@relay.firefox.com>",
   "scripts": {
     "clean": "rimraf _site",
     "start": "cross-env ELEVENTY_ENV=development npm-run-all clean --parallel css eleventy browsersync",
