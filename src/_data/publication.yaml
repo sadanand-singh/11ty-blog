@@ -1,5 +1,25 @@
 ---
 entries:
+  - year: '2022'
+    references:
+      - title: Deep is a Luxury We Don't Have
+        authors:
+          - name: 'Ahmed Taha,'
+            primary: false
+          - name: 'Nhi Truong Vu,'
+            primary: false
+          - name: 'Brent Mombourquette,'
+            primary: false
+          - name: 'Thomas P. Matthews,'
+            primary: false
+          - name: 'Jason Su,'
+            primary: false
+          - name: Sadanand Singh
+            primary: true
+        label: 	MICCAI 2022
+        link: >-
+          https://conferences.miccai.org/2022/files/downloads/MICCAI2022-Program-for-authors.pdf
+        pdf: 'https://arxiv.org/abs/2208.06066'
   - year: '2021'
     references:
       - title: An improved mammography malignancy model with self-supervised learning
