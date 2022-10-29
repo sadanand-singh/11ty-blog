@@ -164,13 +164,6 @@ module.exports = function (eleventyConfig) {
 
                         }
                     });
-                    fs.unlink(imageUrl, function (err) {
-                      if (err) {
-                        console.error(err);
-                      } else {
-                        console.log("File removed:", filename);
-                      }
-                    });
                 }
             })
         }
