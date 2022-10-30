@@ -35,7 +35,7 @@ entries:
         label: SPIE - Medical Imaging 2021
         link: >-
           https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11597/115970W/An-improved-mammography-malignancy-model-with-self-supervised-learning/10.1117/12.2582318.full?SSO=1
-        pdf: 'https://doi.org/10.1117/12.2582318'
+        arxiv: 'https://doi.org/10.1117/12.2582318'
       - title: >-
           A Multisite Study of a Breast Density Deep Learning Model for Full-Field
           Digital Mammography and Synthetic Mammography

@@ -381,7 +381,7 @@ plt.show()
 
 Output:
 
-<img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1567366599/svm/img3.png">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1567366599/svm/img3.png" %}
 
 ### Parameter Tuning for SVM Regression
 

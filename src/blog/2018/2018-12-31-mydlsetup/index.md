@@ -35,8 +35,12 @@ stability. Although, I have recently upgraded the GPU to 2080 Ti to test mixed p
 this has been a pretty stable and trustworthy build.
 
 {% columns %}
-  {% cols %} <figure><img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1546230616/gnome/activities_fsd0wm.png"><figcaption class="text-center">Gnome Activities</figcaption></figure> {% endcols %}
-  {% cols %} <figure><img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1546230615/gnome/chrome_jx6pit.png"><figcaption class="text-center">Google Chrome</figcaption></figure> {% endcols %}
+  {% cols %}
+    {% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1546230616/gnome/activities_fsd0wm.png", "Gnome Activities" %}
+  {% endcols %}
+  {% cols %}
+    {% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1546230615/gnome/chrome_jx6pit.png", "Google Chrome" %}
+  {% endcols %}
 {% endcolumns %}
 
 ## OS Setup
@@ -93,8 +97,12 @@ background-position: center;
 ```
 
 {% columns %}
-  {% cols %} <figure><img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1546230615/gnome/searchApps_y1tgmu.png"><figcaption class="text-center">Applications Search</figcaption></figure> {% endcols %}
-  {% cols %} <figure><img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1546230613/gnome/terminal_g3jr6j.png"><figcaption class="text-center">Terminal</figcaption></figure> {% endcols %}
+  {% cols %}
+    {% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1546230615/gnome/searchApps_y1tgmu.png", "Applications Search" %}
+  {% endcols %}
+  {% cols %}
+    {% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1546230613/gnome/terminal_g3jr6j.png", "Terminal" %}
+  {% endcols %}
 {% endcolumns %}
 
 I prefer google chrome as my default web browser, and can be installed using the following ppa.
@@ -192,8 +200,12 @@ sudo apt install fonts-hack-ttf
 ```
 
 {% columns %}
-  {% cols %} <figure><img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1546230614/gnome/gnomeTweaks_p0fkkv.png"><figcaption class="text-center">Gnome Tweaks</figcaption></figure> {% endcols %}
-  {% cols %} <figure><img src="https://res.cloudinary.com/sadanandsingh/image/upload/v1546230615/gnome/vscode_fcsbl4.png"><figcaption class="text-center">Visual Studio Code</figcaption></figure> {% endcols %}
+  {% cols %}
+    {% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1546230614/gnome/gnomeTweaks_p0fkkv.png", "Gnome Tweaks" %}
+  {% endcols %}
+  {% cols %}
+    {% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1546230615/gnome/vscode_fcsbl4.png", "Visual Studio Code" %}
+  {% endcols %}
 {% endcolumns %}
 
 By default, specially on 4K screens, terminal opens in really tiny window. This can be modified in

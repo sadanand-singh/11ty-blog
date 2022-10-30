@@ -28,7 +28,7 @@ environment. Our setup will also involve encryption of the root partition that w
 [plasma5]: https://en.wikipedia.org/wiki/KDE_Plasma_5
 [btrfs]: https://en.wikipedia.org/wiki/Btrfs
 
-![](https://res.cloudinary.com/sadanandsingh/image/upload/v1545501807/project/plasma_install.jpg)
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1545501807/project/plasma_install.jpg" %}
 
 ## System Details
 

@@ -17,7 +17,7 @@ _Palak_ _Paneer_ is a common north Indian cuisine, Indian cottage cheese cooked 
 Its a bit involved than my last few dishes. Nevertheless, I promise you - the "yummy-ness" of this
 one is worth all the trouble!
 
-<img class="w-full max-w-2xl mx-auto" src="https://res.cloudinary.com/sadanandsingh/image/upload/v1496963332/PalakPaneer1_ugytqp.jpg">
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1496963332/PalakPaneer1_ugytqp.jpg" %}
 
 ## Ingredients
 

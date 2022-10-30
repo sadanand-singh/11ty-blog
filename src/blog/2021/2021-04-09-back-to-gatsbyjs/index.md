@@ -53,7 +53,7 @@ I have had about gatsby.js - its very slow build time. Then I came across this n
 [netlify-plugin-gatsby-cache](https://github.com/jlengstorf/netlify-plugin-gatsby-cache) -
 speeding up the whole process significantly. And, as expected, this site is blazing fast!
 
-![lighthouse](https://res.cloudinary.com/sadanandsingh/image/upload/v1617993565/Screen_Shot_2021-04-06_at_6.15.56_PM_uu0k3x.png)
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1617993565/Screen_Shot_2021-04-06_at_6.15.56_PM_uu0k3x.png" %}
 
 Apart from my own learning, my main reasons for the move can summarized as below:
 

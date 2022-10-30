@@ -68,15 +68,7 @@ scales are combined via upsampling and concatenation. See the complete network d
 details. Finally, the "Head" is a series of conv layers for dense predictions of box regressions
 and classification scores.
 
-<figure>
-  <img src='https://res.cloudinary.com/sadanandsingh/image/upload/v1596231169/yolo-v4/yolov3.png' />
-  <figcaption className='text-center text-xs'>
-    <strong>Image Credits: </strong>
-    <a href='https://towardsdatascience.com/yolo-v3-object-detection-53fb7d3bfe6b'>
-      https://towardsdatascience.com/yolo-v3-object-detection-53fb7d3bfe6b
-    </a>
-  </figcaption>
-</figure>
+{% fig 'https://res.cloudinary.com/sadanandsingh/image/upload/v1596231169/yolo-v4/yolov3.png', "<strong>Image Credits: </strong><a href='https://towardsdatascience.com/yolo-v3-object-detection-53fb7d3bfe6b'>https://towardsdatascience.com/yolo-v3-object-detection-53fb7d3bfe6b</a>" %}
 
 ### Bounding Box Predictions
 
@@ -91,15 +83,7 @@ confidence, and C is the number of classes. In YOLO v3 trained on COCO, B = 3 an
 kernel size is 1 x 1 x 255. The feature map produced by this kernel has identical height and width
 of the previous feature map, and has detection attributes along the depth as described above.
 
-<figure>
-  <img src='https://res.cloudinary.com/sadanandsingh/image/upload/v1596231169/yolo-v4/yolo-bbox.png' />
-  <figcaption className='text-center text-xs'>
-    <strong>Image Credits: </strong>
-    <a href='https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/'>
-      https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/
-    </a>
-  </figcaption>
-</figure>
+{% fig 'https://res.cloudinary.com/sadanandsingh/image/upload/v1596231169/yolo-v4/yolo-bbox.png', "<strong>Image Credits: </strong><a href='https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/'>https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/</a>" %}
 
 **The stride of the network, or a layer is defined as the ratio by which it downsamples the
 input.** In the following examples, I will assume we have an input image of size 416 x 416. YOLO v3

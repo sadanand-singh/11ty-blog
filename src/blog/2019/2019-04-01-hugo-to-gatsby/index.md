@@ -25,7 +25,7 @@ jquery, the website performed poorly when deployed.
 After few weeks of trial and learning, I have been able to transfer all of my content from before
 to Gatsby. You might observe this link to be much faster and aesthetically pleasing.
 
-![](https://res.cloudinary.com/sadanandsingh/image/upload/v1555377338/Screen_Shot_2019-04-15_at_6.14.47_PM_hkrbyn.png)
+{% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1555377338/Screen_Shot_2019-04-15_at_6.14.47_PM_hkrbyn.png" %}
 
 There are hundreds of articles on how to get started with gatsby, best ones of their website
 itself. Hence, I am not going to bore you with YAGT (Yet Another Guide/Tutorial). Here, I just want
