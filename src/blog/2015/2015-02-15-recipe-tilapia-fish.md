@@ -12,6 +12,8 @@ trying to eat healthy.
 Nevertheless, here is another recipe that solves all these at once. Its my _five minute_ Tilapia
 Fish Recipe.
 
+<!-- excerpt -->
+
 Two major ingredients - fish and veggies, of this recipe can be grabbed from the frozen section of
 any supermarket.
 

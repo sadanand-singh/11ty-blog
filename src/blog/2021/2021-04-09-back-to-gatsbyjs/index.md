@@ -15,6 +15,8 @@ using [pelican](https://blog.getpelican.com/) in 2014. Since then, I moved to
 Then in last 2 years, I played quite a bit with gatsby[^1] [^2] [^3] [^4] - different starters and
 themes, but moved to [11ty](https://www.11ty.dev/), moved back to Hugo, back to 11ty...
 
+<!-- excerpt -->
+
 You can see the pattern. You might say I am a Static Site Generator (SSG) hopper! The main reason
 for these moves have been my constant quest for learning something new and making this platform
 simple and aesthetically pleasing.

@@ -12,6 +12,8 @@ explanatory variables (or independent variables) is commonly referred as a **reg
 The simplest model of such a relationship can be described by a linear function - referred as
 _linear regression_.
 
+<!-- excerpt -->
+
 ## Mathematical formulations
 
 Linear Regression represents a linear relationship between the input variables ($X$) and single

@@ -13,6 +13,8 @@ Vermicelli, or also known as _seviyan_ in Hindi, is commonly cooked as a sweet d
 subcontinent. As I try to be away from all things sweet, I came across this recipe which uses this
 in a quite spicy flavor.
 
+<!-- excerpt -->
+
 So, here is my super quick and tasty recipe for these noodles. It takes less than 12 minutes ( 4
 Minutes Preparation + 8 Minutes Cooking).
 

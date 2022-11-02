@@ -14,6 +14,8 @@ Object detection is useful for understanding what's in an image, describing both
 image and where those objects are found. In general, there are two different approaches for this
 task –
 
+<!-- excerpt -->
+
 - **Two-stage** object-detection models – There are mainly two stages in these classification based
   algorithms. In the first stage, it will select a bunch of Region of Interest (ROI) in the image
   where the chances of objects are high. In the second stage, it will apply a Convolution Neural

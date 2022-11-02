@@ -11,6 +11,8 @@ toc: true
 We all can relate to this common routine at the doctor's - spending hours in the waiting room next
 to coughing people, increasing the risk of us getting sicker than we were in the first place.
 
+<!-- excerpt -->
+
 {% tldr %}
 **TLDR**
 

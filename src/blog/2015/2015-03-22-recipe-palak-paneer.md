@@ -13,6 +13,8 @@ Yes, the silence is finally over, and what's better than giving your taste buds 
 after some long busy weeks at work. Continuing with my healthy but tasty choices, today I tried to
 cook _Palak_ (Spinach) with _Paneer_.
 
+<!-- excerpt -->
+
 _Palak_ _Paneer_ is a common north Indian cuisine, Indian cottage cheese cooked in spinach puree.
 Its a bit involved than my last few dishes. Nevertheless, I promise you - the "yummy-ness" of this
 one is worth all the trouble!

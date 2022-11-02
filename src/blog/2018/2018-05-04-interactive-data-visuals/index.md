@@ -12,6 +12,8 @@ is what happens when you have something specific you want to show an audience. T
 **explanatory** visualizations is to tell stories - they’re carefully constructed to surface key
 findings.
 
+<!-- excerpt -->
+
 {% warning %}
 **NOTE: Please note that the interactive plots here do not load, as it requires loading a really large data and javascript file!**
 {% endwarning %}

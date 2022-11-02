@@ -11,6 +11,8 @@ tags:
 Its been quite long since I last made any update to my Desktop at home. After a full year of
 working from home, I finally decided to make it more modern.
 
+<!-- excerpt -->
+
 My old desktop was a [decent workhorse outlined here](/blog/mydlsetup/#workstartion-hardware).
 
 After some thinking I decided to update my CPU to AMD Ryzen 5 3600, instead of another Intel one.

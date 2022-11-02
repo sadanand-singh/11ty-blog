@@ -11,6 +11,8 @@ toc: true
 Because samosa is so so common in India (you literally get samosa and tea/chai at every other street
 corner), I always considered it to be a quintessential Indian delicacy.
 
+<!-- excerpt -->
+
 Aloo [Samosa] is the most
 popular snack back home. I specially like the crispy and less spicy version!
 

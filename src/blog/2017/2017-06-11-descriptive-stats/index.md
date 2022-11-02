@@ -10,6 +10,8 @@ tags:
 One of the first tasks involved in any data science project is to get to understand the data. This
 can be extremely beneficial for several reasons:
 
+<!-- excerpt -->
+
 - Catch mistakes in data
 - See patterns in data
 - Find violations of statistical assumptions

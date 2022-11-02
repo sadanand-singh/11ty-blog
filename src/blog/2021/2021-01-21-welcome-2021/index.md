@@ -10,6 +10,8 @@ toc: false
 Well, congratulations! If you are reading this, you have experienced and managed to survive the
 worst pandemic faced by mankind in the last 100 years!
 
+<!-- excerpt -->
+
 Given all things that happened in 2020, first I was more inclined towards not keeping any record of
 it - just let it somehow disappear from our timeline. You should already have an idea what I felt
 about 2020. Then, the idea of a new year motivated me enough to look back at it and plan for the

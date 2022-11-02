@@ -10,6 +10,8 @@ toc: true
 Another day in the kitchen this weekend calls for another delicacy from my childhood! Samosa and
 Balushahi were a great combination of savory and sweet things to have on any great occasion!
 
+<!-- excerpt -->
+
 In the [last post](/blog/samosa-recipe), we learned to make
 [Samosas](https://en.wikipedia.org/wiki/Samosa), in this one, we are going to
 prepare [Balushahi](https://en.wikipedia.org/wiki/Balushahi)!

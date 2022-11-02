@@ -11,6 +11,8 @@ And it's that time of year again! Most of you must have started planning for a b
 new decade. Keeping up with that spirit, this post is about my plans and expectations regarding
 this blog space for the upcoming new year.
 
+<!-- excerpt -->
+
 Its been almost 5 years since I started this blog. Those of you who have been following me here,
 would be aware, this has not been easy to follow at all. With frequent changes in the design,
 theme, web address (from github pages to datasciencevision.com to the current reckoning.dev!) and

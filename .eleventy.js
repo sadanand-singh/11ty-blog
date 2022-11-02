@@ -11,7 +11,10 @@ const site = require('./src/_data/site');
 const shortcodes = require('./lib/shortcodes/shortcodes.js')
 const pairedshortcodes = require('./lib/shortcodes/paired_shortcodes.js')
 const markdownLib = require('./lib/plugins/markdown');
+const linkPreview = require('./lib/plugins/linkPreview/linkPreview');
+const getStyle = require('./lib/plugins/linkPreview/getStyle');
 const codeClipboard = require("eleventy-plugin-code-clipboard");
+const pluginSEO = require("eleventy-plugin-seo");
 
 /**
  * Prefixes the given URL with the site's base URL.
@@ -24,6 +27,11 @@ const toAbsoluteUrl = (url) => {
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
   eleventyConfig.setUseGitIgnore(false);
+  eleventyConfig.setFrontMatterParsingOptions({
+    excerpt: true,
+    excerpt_separator: "<!-- excerpt -->",
+    excerpt_alias: 'excerpt'
+  });
 
   // Merge data instead of overriding
   eleventyConfig.setDataDeepMerge(true);
@@ -37,6 +45,7 @@ module.exports = function (eleventyConfig) {
     listItemClass: 'pl-1 active:text-indigo-500',
     listItemAnchorClass: 'transition duration-500 transform hover:translate-x-2 block mt-2 text-sm hover:text-indigo-600 ml-0 text-gray-700 dark:text-gray-300 dark:hover:text-indigo-400 font-semibold active:text-indigo-500'
   });
+  eleventyConfig.addPlugin(pluginSEO, require("./src/_data/seo.json"));
 
   /**
    * Shortcodes
@@ -45,6 +54,14 @@ module.exports = function (eleventyConfig) {
    Object.keys(shortcodes).forEach((shortcodeName) => {
     eleventyConfig.addShortcode(shortcodeName, shortcodes[shortcodeName])
   })
+  eleventyConfig.addShortcode('linkPreviewCss', () => {
+    return getStyle();
+  });
+
+  eleventyConfig.addNunjucksAsyncShortcode('linkPreview', async (url) => {
+    const result = await linkPreview(url);
+    return result;
+  });
 
   eleventyConfig.addFilter('splitlines', function(input) {
     const parts = input.split(' ');

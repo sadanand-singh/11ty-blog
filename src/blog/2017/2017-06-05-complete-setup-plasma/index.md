@@ -11,6 +11,8 @@ tags:
 by following the rolling-release model. Arch Linux allows you to use updated cutting-edge software
 and packages as soon as the developers released them.
 
+<!-- excerpt -->
+
 [Plasma 5][plasma5] is the current generation
 of the desktop environment created by KDE primarily for Linux systems.
 

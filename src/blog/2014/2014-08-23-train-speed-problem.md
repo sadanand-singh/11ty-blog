@@ -14,6 +14,8 @@ As promised in the intro post, here is the first puzzle!
 A man needs to go through a train tunnel to reach the other side. He starts running through the
 tunnel in an effort to reach his destination as soon as possible.
 
+<!-- excerpt -->
+
 When he is 1/4th of the way
 through the tunnel, he hears the train whistle behind him. Assuming the tunnel is not big enough
 for him and the train, he has to get out of the tunnel in order to survive. We know that the

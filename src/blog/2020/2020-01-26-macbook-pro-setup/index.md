@@ -12,6 +12,8 @@ been working a lot on my MacBook Pro. In this post, I want to document my setup 
 my own future needs. I am always curious to see how other software developers are setting up their
 development machines so I figured it would be a good opportunity to share mine.
 
+<!-- excerpt -->
+
 I am a research scientist in AI/Deep Learning and do some software development using Javascript,
 markdown, etc., so most of my configuration will be around programming. My current MacBook
 configuration is as follows:

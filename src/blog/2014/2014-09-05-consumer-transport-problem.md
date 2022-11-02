@@ -10,6 +10,8 @@ tags:
 Here is another puzzle starring a monkey, transportation and money! Short summary - avoid dealing
 with fools!
 
+<!-- excerpt -->
+
 ## Problem Statement
 
 The owner of an apple plantation has a monkey. He wants to transport his 10000 apples to the

@@ -13,6 +13,8 @@ One side of the coin is the hardware - the speed of computers. The famous
 [Moore's law](https://www.techradar.com/news/computing/moore-s-law-how-long-will-it-last--1226772)
 states that:
 
+<!-- excerpt -->
+
 > The complexity for minimum component costs has increased at a rate of roughly a factor of two per
 > year. Certainly over the short term this rate can be expected to continue, if not to increase.
 > Over the longer term, the rate of increase is a bit more uncertain, although there is no reason

@@ -11,6 +11,8 @@ I am quite found of _Paneer_. However, cooking it can be a hassle.
 You can get _paneer_ generally at any Indian grocery store. For enthusiasts,
 [Here](https://thewayofcheese.com/2013/02/18/paneer/) is a recipe for making _Paneer_ from milk.
 
+<!-- excerpt -->
+
 Here is a version of recipe that I use quite often. It involves two parts - Baking _Paneer_ and
 Cooking the veggies.
 

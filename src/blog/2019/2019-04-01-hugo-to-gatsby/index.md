@@ -13,6 +13,8 @@ Nikola to Hugo in [a post](/blog/nikola-to-hugo) back in 2017. The main reason f
 my constant quest for learning something new and making this platform simple and aesthetically
 pleasing.
 
+<!-- excerpt -->
+
 Lately, I have been learning a lot about javascript and react in particular. Naturally,
 my next question was, could I use react in my blog as well? And that brought me to -
 [Gatsby](https://www.gatsbyjs.org/)!

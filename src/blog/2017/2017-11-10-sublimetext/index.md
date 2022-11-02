@@ -10,6 +10,8 @@ I have been using [Sublime text](https://www.sublimetext.com/) as my primary edi
 now. Here I wanted to share my current setup for the editor including all settings, packages,
 shortcut keys and themes.
 
+<!-- excerpt -->
+
 ::: callout
 This post has been updated with my latest sublime settings.
 :::

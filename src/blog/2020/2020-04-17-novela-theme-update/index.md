@@ -12,6 +12,8 @@ toc: true
 The world of web design, programming, and specially [gatsbyjs] has been moving at an astonishing
 pace. If you have been following me here, you would know, I am all for new, and cleaner looks.
 
+<!-- excerpt -->
+
 {% info %}
 Note that since moving to [11ty](https://www.11ty.dev/), many of the codes and features described
 in this post will be broken. Please refer to my

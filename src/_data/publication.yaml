@@ -19,7 +19,7 @@ entries:
         label: 	MICCAI 2022
         link: >-
           https://conferences.miccai.org/2022/files/downloads/MICCAI2022-Program-for-authors.pdf
-        pdf: 'https://arxiv.org/abs/2208.06066'
+        arxiv: 'https://arxiv.org/abs/2208.06066'
   - year: '2021'
     references:
       - title: An improved mammography malignancy model with self-supervised learning
@@ -35,7 +35,7 @@ entries:
         label: SPIE - Medical Imaging 2021
         link: >-
           https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11597/115970W/An-improved-mammography-malignancy-model-with-self-supervised-learning/10.1117/12.2582318.full?SSO=1
-        arxiv: 'https://doi.org/10.1117/12.2582318'
+        pdf: 'https://doi.org/10.1117/12.2582318'
       - title: >-
           A Multisite Study of a Breast Density Deep Learning Model for Full-Field
           Digital Mammography and Synthetic Mammography

@@ -12,6 +12,8 @@ vectors `x`. In an auto-encoder network, one tries to predict `x` from `x`. It i
 a mapping from `x` to `x` if the network has no constraints, but if the network is constrained the
 learning process becomes more interesting.
 
+<!-- excerpt -->
+
 In this article, we are going to take a detailed look at
 the mathematics of different types of autoencoders (with different constraints) along with a sample
 implementation of it using [Keras][keras], with a [tensorflow] back-end.

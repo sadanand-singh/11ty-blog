@@ -10,6 +10,8 @@ tags:
 You must be thinking - yet another installation guide! There is no dearth of _Installation_ guides
 of Arch on web. So why another one?
 
+<!-- excerpt -->
+
 With advancements like BTRFS file system, UEFI motherboards and modern _in-development_ desktop
 environment like Plasma 5; traditional
 [Arch Wiki](https://wiki.archlinux.org/index.php/Installation_guide) guide and

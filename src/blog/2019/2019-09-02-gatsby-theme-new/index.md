@@ -11,6 +11,8 @@ new address [reckoning.dev](https://reckoning.dev)! I let the old address lease 
 for a new (hopefully better!) home for this blog. The code base has also moved to a
 [new repository](https://github.com/sadanand-singh/reckoning.dev).
 
+<!-- excerpt -->
+
 Along with the updated address, you will also a find few big and many small changes in the looks of
 the overall theme. When I had [moved to gatsbyJS](/blog/hugo-to-gatsby), the overall looks of this site
 was very much a replica of [Tania Rascia's Blog](https://www.taniarascia.com/). In last few months,

@@ -12,6 +12,8 @@ set of my own changes/configurations on top of [zprezto](https://github.com/sori
 [zplug](https://github.com/zplug/zplug) plugins. You can see all of my changes/configurations in my
 personal [zprezto repo](https://github.com/sadanand-singh/My-Zprezto).
 
+<!-- excerpt -->
+
 The features and
 improvements it makes on plain old bash are impressive. But as my needs change, so does my shell.
 In this post, I will lay out my motivations for the switch, along with some details of my new

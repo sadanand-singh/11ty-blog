@@ -14,6 +14,8 @@ Prove that $p^2-1$ is divisible by 24, where $p$ is a prime number with $p>3$.
 
 This is a simple one - do not go by the technicality of the problem statement.
 
+<!-- excerpt -->
+
 ### Solution 1
 
 $p^2-1 = (p-1)\times (p+1)$ Given, $p$ is a prime number $>3$, $p-1$ and $p+1$ are even. We can

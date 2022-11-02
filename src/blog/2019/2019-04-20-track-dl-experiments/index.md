@@ -14,6 +14,8 @@ learning research as well. Beyond the usual challenges in software development, 
 developers face new challenges - experiment management (tracking which parameters, code, and data
 went into a result) and reproducibility (running the same code and environment later)!
 
+<!-- excerpt -->
+
 {% info %}
 #### **UPDATE**
 

@@ -13,6 +13,8 @@ I used to use [Arch Linux](https://www.archlinux.org/) in [the past](/blog/compl
 however recently I have started using Ubuntu LTS as main OS mainly for simplicity and easy
 availability of numerous tricks online!
 
+<!-- excerpt -->
+
 The main reason I want to to take this little complex route of installation than simple easy way
 that Ubuntu provides:
 

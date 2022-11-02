@@ -13,6 +13,8 @@ site should be linked by content type not in a typical chronological order. One 
 such an organization of content is to have a list of related posts at the end of every post. If you
 look at the end of this post you can find a live example of what I am talking about.
 
+<!-- excerpt -->
+
 In this post, I am going to describe how I implemented _Related Posts_ feature in my site which is
 powered by [gatsby.js](https://www.gatsbyjs.com/).
 
@@ -20,7 +22,6 @@ powered by [gatsby.js](https://www.gatsbyjs.com/).
 NOTE: This site now uses 11ty instead of gatsby.js. You can find all the code at the old
 repository at [github](https://github.com).
 {% endwarning %}
-
 
 ## The Logic
 

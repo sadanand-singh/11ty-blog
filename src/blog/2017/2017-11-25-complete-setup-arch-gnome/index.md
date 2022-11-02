@@ -11,6 +11,8 @@ If you have been following me on this space, you would have known by now, I am v
 about my computers, its operating systems, looks, softwares etc. Before you start getting any wrong
 ideas, my love for [Arch Linux][arch-linux] is still going strong.
 
+<!-- excerpt -->
+
 However, I have moved on to
 [Gnome 3][gnome3] as my choice desktop. This post is an updated version of my
 [previous post](/blog/arch-install) with the latest configuration of my machine. I have also update my

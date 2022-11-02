@@ -10,6 +10,8 @@ tags:
 In my last post on [Arch Installation Guide](/blog/arch-install) , We installed the base system and we
 can now login into our new system as root using the password that we set.
 
+<!-- excerpt -->
+
 ::: callout-blue
 **Note:** Please see [my latest post](/blog/complete-setup-arch-gnome) on installing Arch linux with Gnome 3 for
 an up to date version of this guide.

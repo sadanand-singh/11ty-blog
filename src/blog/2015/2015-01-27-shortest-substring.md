@@ -12,6 +12,7 @@ Given an alphanumeric string, find the shortest substring that occurs exactly on
 candidates of the same length, you must output all of them in the order of occurrence. The _space_
 is NOT considered as a valid non-repeating substring.
 
+<!-- excerpt -->
 ## Examples
 
 Consider the following cases:

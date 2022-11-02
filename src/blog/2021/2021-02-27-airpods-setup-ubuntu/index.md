@@ -14,6 +14,8 @@ If you have apple airpods or airpods pro, and sometimes want to use it with your
 follow this guide! If you try to pair airpods without doing any of these steps, most likely the
 pairing process will never complete.
 
+<!-- excerpt -->
+
 This is a compilation of ideas from few askubuntu posts.[^1] [^2]
 
 {% info %}

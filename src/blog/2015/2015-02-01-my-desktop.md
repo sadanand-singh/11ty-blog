@@ -10,6 +10,8 @@ tags:
 It has been long due. Just built a new desktop. Here are different parts I used to build this
 beauty. (Updated Cost)
 
+<!-- excerpt -->
+
 {% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1596315538/desktop-cpu_js8xpy.jpg" %}
 
 <br/>

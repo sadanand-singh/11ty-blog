@@ -10,6 +10,8 @@ I have been using [Nikola] to build this Blog. Its a great static site build sys
 on Python. However, It has some crazy amount of dependencies (to have reasonable looking site). It
 uses [restructured text (rst)][rst] as the primary language for content creation.
 
+<!-- excerpt -->
+
 Personally, I use
 markdown for almost every thing else - taking notes, making diary, code documentation etc.
 Furthermore, given Nikola tries to support almost everything in a static site builder, lately its

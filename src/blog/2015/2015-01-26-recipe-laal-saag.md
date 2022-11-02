@@ -10,6 +10,8 @@ I have started eating a lot of greens these days. As a kid, I always loved a veg
 mom, which was made of red leaves, called "_Laal Saag_" in Hindi. I could never find what exactly
 was the English/American name for those leaves.
 
+<!-- excerpt -->
+
 Recently, at one of the Korean grocery stores, I came across red Amaranth leaves. Those looked
 strikingly similar to the red leaves that I used to have back home in India.
 

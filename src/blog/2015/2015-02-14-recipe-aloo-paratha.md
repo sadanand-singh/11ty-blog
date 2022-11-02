@@ -12,6 +12,8 @@ bread from the Northern India. It is my favorite breakfast dish when I am in Ind
 Here is my try in making some edible _parathas_. It might take few trials in making a perfectly
 round-shaped _Paratha_. Please share your views and inputs in comments below.
 
+<!-- excerpt -->
+
 {% fig "https://res.cloudinary.com/sadanandsingh/image/upload/v1496963330/AlooParathaStuffing_dclifs.jpg" %}
 
 ## Ingredients

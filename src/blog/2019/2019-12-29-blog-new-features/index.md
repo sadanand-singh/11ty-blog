@@ -11,6 +11,8 @@ spirit. And, I am hoping this is going to be the begining of maturity of the loo
 this blog. In the upcoming year, I plan to focus mainly on content, specifically related to
 medicine, AI and proramming.
 
+<!-- excerpt -->
+
 ::: warning
 THIS POST IS NOT VALID ANYMORE AS I HAVE MOVED TO 11ty!
 :::
