@@ -1,0 +1,15 @@
+{
+  "title": "Sadanand's Blog | reckoning.dev",
+  "description": "Sadanand Singh Blog and Digital Garden",
+  "url": "https://reckoning.dev",
+  "author": "Sadanand Singh",
+  "twitter": "reckoningdev",
+  "image": "/static/img/android-chrome-512x512.png",
+  "options": {
+    "titleStyle": "minimalistic",
+    "titleDivider": "|",
+    "imageWithBaseUrl": true,
+    "twitterCardType": "summary_large_image",
+    "showPageNumbers": false
+  }
+}

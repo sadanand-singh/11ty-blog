@@ -1,0 +1,15 @@
+{
+  "layout": "posts",
+  "ogtype": "article",
+  "toc": true,
+  "tags": [],
+  "eleventyComputed": {
+    "sitemap": {
+      "changefreq": "weekly",
+      "priority": 0.75,
+      "ignore": false
+    },
+    "permalink": "/blog/{{ slug }}/index.html",
+    "image": "{{ ['/img/social-preview-images/', title | slugify, '-preview.jpeg'] | join }}"
+  }
+}
